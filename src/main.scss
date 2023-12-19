@@ -1,0 +1,35 @@
+$persent: calc(1440 / 100);
+$heightpersent: calc(2120 / 100);
+body{  
+    background: #F6F7F9;
+    height: calc(2120 / $heightpersent * 1%);
+    font-family: Plus Jakarta Sans;
+    box-sizing: border-box;
+    overflow: scroll;
+
+}
+main{
+
+    padding-top : calc(40 / $heightpersent * 1%);
+}
+.NavVisible{
+    display: flex;
+    nav{
+        display: flex;
+        flex: 0 0 25%;
+        align-items: stretch;
+    }
+    main{
+        flex: 1 1 75%;
+    }
+}
+.NavNotVisible{
+    display: block;
+    nav{
+        display: none;
+    }
+    main{
+        display: block;
+
+    }
+}

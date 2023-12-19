@@ -1,0 +1,47 @@
+$persent: calc(1440 / 100 - 2 * (60 / 1440 / 100));
+$SidesPersent: calc($persent / 2);
+$heightpersent: calc(2120 / 100);
+
+.Contaiter{
+    background-color: #fff;
+    height: calc(124 / $heightpersent * 1%);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: calc(40 / $heightpersent * 1%);
+    padding-left: calc(60 / $persent * 1%);
+    padding-right: calc(60 / $persent * 1%);
+    padding-top : calc(40 / $heightpersent * 1%);
+    border-bottom: 1px solid rgba(195, 212, 233, 0.40);
+}
+//~~~~~~~~~~~LEFTSIDE~~~~~~~~~~//
+
+
+.leftSide{
+    flex: 50%;
+    display: flex;
+    justify-content: space-around;
+    .logo{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: var(--primary-500, #3563E9);
+        font-size: 2vw;
+    }
+}
+
+
+//~~~~~~~~~~~RIGHTSIDE~~~~~~~~~~//
+.rightSide{
+    flex: 50%;
+    display: flex;
+    justify-content: flex-end;
+    .list{
+        width: calc(236 / $SidesPersent * 1%);
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+img{
+    cursor: pointer;
+}
