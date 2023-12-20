@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import classes from '../Comment/Comment.module.scss'
 import Favorite from "../Content/PopularCars/Favorite/Favorite";
 import { useState } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { AllCars } from "../CarArray";
 const Comment = () => {
@@ -14,19 +14,25 @@ const Comment = () => {
     const [img, setImg] = useState()
     const [style, setstyle] = useState()
         const MainImage = (el) => {
-                setImg(el.src)
                      if(el.alt == "main") {
                     setstyle(false)
+                    setImg(el.src)
+                }
+                else if(el.alt == undefined){
+                    setstyle(false)
+                    setImg(el)
                 }
                 else{
                     setstyle(true)
+                    setImg(el.src)
                 }
         }
         const Car = AllCars.filter((car) => car.id == id)[0]
 
         useEffect(() => {
             if(Car.src){
-                setImg(Car.src)
+                setImg(
+                    `${location.origin}/${Car.src}`)
             }
         }, [Car])
             console.log(Car)
@@ -48,11 +54,11 @@ const Comment = () => {
                         </div>
                     </div>
                      <ul   className={classes.rowImges}>
-                        <div className={classes.back}>
-                             <li id={classes['mainImg']} onClick={ (e) => MainImage(e.target)} ><img className={classes.TheCar}  src={`${location.origin}/${Car.src}`} alt="main" /></li>
+                        <div  className={classes.back} onClick={ () => MainImage(`${location.origin}/${Car.src}`)} >
+                             <li id={classes['mainImg']}  ><img className={classes.TheCar}  src={`${location.origin}/${Car.src}`} alt="main" /></li>
                         </div>
-                        <li id = {classes[1]} onClick={ (e) => MainImage(e.target)} ><img  src="src/components/HeroSection/img/View 2.png" alt="other" /></li>
-                        <li id = {classes[2]}onClick={ (e) => MainImage(e.target)} ><img  src="src/components/HeroSection/img/View 3.png" alt="other" /></li>
+                        <li id = {classes[1]} onClick={ (e) => MainImage(e.target)} ><img  src={`${location.origin}/public/assets/View 2.png`} alt="other" /></li>
+                        <li id = {classes[2]}onClick={ (e) => MainImage(e.target)} ><img  src={`${location.origin}/public/assets/View 3.png`} alt="other" /></li>
                     </ul>
                 </div>
                 <div className={classes.information} >
@@ -69,26 +75,28 @@ const Comment = () => {
                         NISMO has become the embodiment of Nissan's outstanding performance, inspired by the most unforgiving proving ground, the "race track".
                         </div>
                         <div className={classes.Characteristics}>
-                            <div className={classes.line}>
-                                <p>Type Car</p> <p>{Car.type}</p> 
-                                <p>Capacity</p> <p>{Car.People}</p>
+                            <div className={classes.lineFirst}>  {/*сделать таблицей */}
+                                <p style={{color : '#90A3BF'}}>Type Car</p> <p>{Car.type}</p> 
+                                <p style={{color : '#90A3BF'}}>Capacity</p> <p>{Car.People} Person</p>
                             </div>
                             <div className={classes.line}>
-                                <p>Steering</p> <p>{Car.manual}</p> 
-                                <p>Gasoline</p> <p>{Car.gas}L</p>
+                                <p style={{color : '#90A3BF'}}>Steering</p> <p>{Car.manual}</p> 
+                                <p style={{color : '#90A3BF'}}>Gasoline</p> <p>{Car.gas}L</p>
                             </div>
                         </div>
                     </div>
                     <div className={classes.footer}>
-                <div className={classes.cost}>
-                    <div className={classes.Actual}>$ {Car.cost} / <em>day</em>  </div>
-                    <div className={classes.Old}>{Car.oldCost} </div>
+                        <div className={classes.cost}>
+                            <div className={classes.Actual}>$ {Car.cost} / <em>day</em></div>
+                            <div className={classes.Old}>{Car.oldCost} </div>
+                        </div>
+                        <div>
+                         <button className={classes.Rent} > <Link to = {`/Payment/${id}`}>Rent now</Link> </button>
+                        </div>
+                    </div>
                 </div>
-                 {/* <button className={classes.Rent} onClick={ () => setChousenCar(car)} ><Link to= "payment" >Rent now </Link></button>  */}
             </div>
-                </div>
-            </div>
-            <div className="comment"></div>
+            <div className="Comment"></div>
             <div className="Cars"></div>
         </div>
     )
