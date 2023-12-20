@@ -107,7 +107,7 @@ const Comment = () => {
 </svg></button>
                 </div>
             </div>
-            <div className="Cars"></div>
+            <div className="Cars"> </div>
         </div>
     )
 }
