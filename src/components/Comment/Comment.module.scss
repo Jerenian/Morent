@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-around;
     align-items: stretch;
+    margin-bottom: 32px;
     .Images{
         margin: 0 32px;
+        flex: 0 1 49%;
     }
     .rowImges{
         display: flex;
@@ -75,12 +77,13 @@
 }
 .information{
     border-radius: 10px;
-    flex: 0 0 49%;
+    flex: 0 1 49%;
     background-color: #fff;
     padding: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     .header{
         display: flex;
         flex-direction: column;
@@ -114,21 +117,34 @@
             color: #596780;
             padding-top: 32px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+
             .lineFirst{
-                padding-bottom: 16px;
+                flex:  0 0 40%;
                 display: flex;
                 justify-content: space-between;
+                flex-direction: column;
+                align-items: stretch;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+
+                }
             }
             .line{
+                flex: 0 0 40%;
                 display: flex;
                 justify-content: space-around;
+                flex-direction: column;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
 
         }
-        .Characteristics::nth-child(){
-            padding-bottom: 16px;
-            background-color: red;
+        .UpperLine{
+            margin-bottom: 16px;
         }
     }
     .footer{
@@ -136,7 +152,28 @@
         justify-content: space-between;
 
         .cost{
-
+            color:#1A202C;
+            font-size: 1.5em;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            em{
+                color: #90A3BF;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            .Old{
+                color: #90A3BF;
+                font-size: 1rem;
+                font-weight: 700;
+                text-decoration: line-through;
+            }
+        }
+        .Rent{
+            padding: 16px;
+            border-radius: 4px;
+            background:  #3563E9;
+            border: none;
         }
     }
 }

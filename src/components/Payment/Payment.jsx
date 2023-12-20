@@ -8,7 +8,11 @@ import Method from "./Method/Method";
 import Rental from "./Rental/Rental";
 import Footer from "../footer/Footer";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { AllCars } from "../CarArray";
 const Payment = ({chosenCar, setChousenCar}) => {
+    const {id} = useParams()
+    const Car = AllCars.filter((car) => car.id == id)[0]
     return(
         <div>
             <div className={classes.Container}>

@@ -1,7 +1,11 @@
 import React from "react";
 import classes from "./Summary.module.scss"
 import { useEffect } from "react";
-const Summary = ({ setChousenCar, chosenCar}) => {
+import { useParams } from "react-router-dom";
+import { AllCars } from "../../CarArray";
+const Summary = () => {
+    const {id} = useParams()
+    const chosenCar = AllCars.filter((car) => car.id == id )[0]
 
     return (
             
@@ -13,7 +17,7 @@ const Summary = ({ setChousenCar, chosenCar}) => {
                 <div className={classes.item}>
                     <div className={classes.car}>
                         <div className={classes.img}>
-                            <img src={chosenCar.src} alt="" />
+                            <img src={`${location.origin}/${chosenCar.src}`} alt="" />
                         </div>
                         <div className={classes.discription}>
                             <div className={classes.carName} >{chosenCar.name}</div>

@@ -31,7 +31,7 @@ function App() {
               <Routes>
                 <Route path='/' element = {<Content setChousenCar = {setChousenCar} navVisible = {navVisible} setnavVisible = {setnavVisible}></Content>}></Route>
                 <Route path='/Comments/:id' element ={<Comment/>}></Route>
-                <Route path='/Payment/:id' element = {<Payment setChousenCar = {setChousenCar} chosenCar = {chosenCar} />}></Route>
+                <Route path='/Payment/:id' element = {<Payment />}></Route>
               </Routes>
                 
             </main>

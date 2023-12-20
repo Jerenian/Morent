@@ -10,24 +10,31 @@ const Hero = ({navVisible}) => {
     }
     return  (
         <div className={classes.HeroContainer}>
-            <Link to = "/Comments" >
             <div className = {rootclasses.join(" ")}>
+            
                 <div className={classes.leftCard} >
+                    <Link to = "/Comments/1" >
                     <div className={classes.back}>
                         <h1>The Best Platform for Car Rental</h1>
                         <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
                         <button onClick={(e) => e.preventDefault} style={{cursor : 'pointer'}} type="submit"> Rental Car </button>
                         <img src="src/components/HeroSection/img/Hero.png" alt="" />
                     </div>
+                    </Link>
                 </div>
+                
+                
                 <div className={classes.RightCard}>
+                    <Link to = "/Comments/2" >
                     <div className={classes.backTwo}>
                     <h1>The Best Platform for Car Rental</h1>
                         <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
                         <button>Rental Car</button>
                         <img src="src/components/HeroSection/img/HeroTwo.png" alt="" />
                     </div>
+                    </Link>
                 </div>
+                
             </div>
             <div className={classes.LowerSide}>
                 <div className={classes.PickUp}>
@@ -77,7 +84,6 @@ const Hero = ({navVisible}) => {
 
                 </div>
             </div>
-            </Link>
         </div>
     )
 }
