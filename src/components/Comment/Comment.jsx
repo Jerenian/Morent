@@ -6,28 +6,25 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { AllCars } from "../CarArray";
 import Reviews from "./Reviews";
+import { arrows } from "../HeroSection/img/arrowscopy";
 const Comment = () => {
-// прописать айдишники для картинок от 1 до 2 [√]
-// создать стейт который принимает айди
-// создать функцию с условием при котором если айдишник строго больше 0 функция возваращает false
-// прописать data елемент который при значениие true добавляет фон, при false растягивает картинку по всему блоку
+// решить проблему с исчезновением background
+///нужно повесить картинку выше содержимого и ниже родительского, поставить ей z-index ниже у контента и выше чем у родительского
     const {id} = useParams()
     const [img, setImg] = useState()
     const [show, setShow] = useState(false)
-    const [style, setstyle] = useState()
+    const [style, setstyle] = useState(false)
         const MainImage = (el) => {
-                     if(el.alt == "main") {
-                    setstyle(false)
-                    setImg(el.src)
-                }
-                else if(el.alt == undefined){
-                    setstyle(false)
-                    setImg(el)
-                }
-                else{
-                    setstyle(true)
-                    setImg(el.src)
-                }
+            if(el.className === 'other'){
+                setstyle(true)
+                setImg(el.src)
+                console.log(el.clientHeight)
+            }
+            else{
+                setstyle(false)
+                setImg(`${location.origin}/${Car.src}`)
+                
+        }
         }
         const Car = AllCars.filter((car) => car.id == id)[0]
 
@@ -36,13 +33,14 @@ const Comment = () => {
                 setImg(
                     `${location.origin}/${Car.src}`)
             }
-        }, [Car])
-            console.log(Car)
+        }, [])
     return (
         <div className={classes.Container}>
             <div className={classes.UpperSide}>
                 <div className={classes.Images}> 
-                    <div data-selector = {style} className={classes.backImg}> 
+                    <div data-selector = {style} className={classes.backImg}>
+                        <div className={classes.bacground}>{arrows}</div>
+                        
                         <div id={classes['mainImg']} data-selector= {style} className={classes.BigImg} >
                             <div className={classes.heroText}>
                                 <h2 className={classes.heroTitle}>
@@ -56,11 +54,12 @@ const Comment = () => {
                         </div>
                     </div>
                      <ul   className={classes.rowImges}>
-                        <div  className={classes.back} onClick={ () => MainImage(`${location.origin}/${Car.src}`)} >
-                             <li id={classes['mainImg']}  ><img className={classes.TheCar}  src={`${location.origin}/${Car.src}`} alt="main" /></li>
+                        <div  className={classes.back} onClick={ (e) => MainImage(e.target)} >
+                            <div className={classes.bacgroundRow}>{arrows}</div>
+                            <li  id={classes['mainImg']}  ><img className={classes.TheCar}  src={`${location.origin}/${Car.src}`} /></li>
                         </div>
-                        <li id = {classes[1]} onClick={ (e) => MainImage(e.target)} ><img  src={`${location.origin}/public/assets/View 2.png`} alt="other" /></li>
-                        <li id = {classes[2]}onClick={ (e) => MainImage(e.target)} ><img  src={`${location.origin}/public/assets/View 3.png`} alt="other" /></li>
+                        <li id = {classes[1]} onClick={ (e) => MainImage(e.target)} ><img className="other"  src={`${location.origin}/public/assets/View 2.png`}  /></li>
+                        <li id = {classes[2]}onClick={ (e) => MainImage(e.target)} ><img className="other"  src={`${location.origin}/public/assets/View 3.png`} /></li>
                     </ul>
                 </div>
                  {/* спираль пропадает вероятнее всего из за того что data - selector не принимает true */}

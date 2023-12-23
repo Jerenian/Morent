@@ -1,4 +1,4 @@
-
+export const spiral =
 <svg xmlns="http://www.w3.org/2000/svg" width="795" height="795" viewBox="0 0 795 795" fill="none">
   <path d="M422 398C422 411.807 410.807 423 397 423C383.193 423 372 411.807 372 398C372 384.193 383.193 373 397 373C410.807 373 422 384.193 422 398Z" stroke="white" stroke-opacity="0.06" stroke-width="20"/>
   <path d="M472 398C472 439.421 438.421 473 397 473C355.579 473 322 439.421 322 398C322 356.579 355.579 323 397 323C438.421 323 472 356.579 472 398Z" stroke="white" stroke-opacity="0.06" stroke-width="20"/>
