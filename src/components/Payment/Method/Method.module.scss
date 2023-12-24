@@ -1,0 +1,124 @@
+.Container{
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom:32px;
+    box-sizing: border-box;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    h1{
+        color: var(--secondary-500, #1A202C);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px;
+    }
+    p{
+        color: var(--secondary-300, #90A3BF);
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+    }
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #F6F7F9;
+    padding: 24px;
+    input{
+        padding: 5%;
+        font-size: 14px;
+        width: 91%;
+        border-radius: 10px;
+        background: #fff;
+        border: 0;
+    }
+    h2{
+        padding-bottom: 5%;
+    }
+    .NameAddres{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        margin-bottom: 24px;
+        :first-child{padding-right: 12px;}
+    }
+    .PhoneTown{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        :first-child{padding-right: 12px;}
+    }
+}
+.topImg{
+    display: flex;
+    justify-content: space-between;
+    .leftImg{
+        display: flex;
+        margin-bottom: 24px;
+        p{
+            padding-left: 8px;
+            display: flex;
+            align-items: center;
+        }
+        img{
+            border-radius: 70px;
+            border: 4px solid #C2D0F9;
+        }
+    }
+    .rightImg{
+        display: flex;
+        .visa{
+            margin-right: 12px;
+        }
+    }
+}
+.Steps{
+    color: var(--secondary-300, #90A3BF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.28px;
+}
+.PayBit{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+label{
+
+    padding: 16px 32px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: #F6F7F9;
+    div{
+        display: flex;
+        p{
+            display: flex;
+            align-items: center;
+            margin-left:20px ;
+            color: var(--secondary-500, #1A202C);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+        }
+        input{
+            display: flex;
+            align-items: center;
+        }
+    }
+}

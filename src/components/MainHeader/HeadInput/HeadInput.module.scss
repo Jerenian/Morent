@@ -1,0 +1,26 @@
+$persent: calc(1440 / 100 - 2 * (60 / 1440 / 100));
+$SidesPersent: calc($persent / 2);
+$heightPersent: calc((40 + 44) / 100);
+
+.form{
+    border-radius: 70px;
+    border: 1px solid #000;
+    display: flex;
+    width: calc(492 / $SidesPersent * 1%);
+    outline: auto;
+    padding-left:calc(20 / $SidesPersent * 1%) ;
+    padding-right:calc(20 / $SidesPersent * 1%) ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.input {
+    padding-left: calc(20 / $SidesPersent * 1%) ;
+    padding-right:calc(20 / $SidesPersent * 1%) ;
+    font-size: 0.8vw;
+    padding-right: 1%;
+    width: 100%;
+    border: 0px ;
+    outline:none;
+}

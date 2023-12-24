@@ -1,0 +1,66 @@
+.Container{
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom:32px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    h1{
+        color: var(--secondary-500, #1A202C);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px;
+    }
+    p{
+        color: var(--secondary-300, #90A3BF);
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+    }
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    input{
+        padding: 5%;
+        font-size: 14px;
+        width: 86%;
+        border-radius: 10px;
+        background: #F6F7F9;
+        border: 0;
+    }
+    h2{
+        padding-bottom: 5%;
+    }
+    .NameAddres{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        margin-bottom: 24px;
+        :first-child{padding-right: 12px;}
+    }
+    .PhoneTown{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        :first-child{padding-right: 12px;}
+    }
+}
+.Steps{
+    color: var(--secondary-300, #90A3BF);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 21px */
+letter-spacing: -0.28px;
+}

@@ -1,0 +1,95 @@
+.Container{
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom:32px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    h1{
+        color: var(--secondary-500, #1A202C);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px;
+    }
+    p{
+        color: var(--secondary-300, #90A3BF);
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+    }
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    select{
+        padding: 5%;
+        font-size: 14px;
+        width: 95.7%;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0;
+        background: url(src/components/HeroSection/img/select.svg) 96% / 15% no-repeat #F6F7F9; 
+        background-size: 5%;
+        color: var(--secondary-300, #90A3BF);
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 21px */
+        letter-spacing: -0.28px;
+    }
+    h2{
+        padding-bottom: 5%;
+    }
+    .LocDate{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        margin-bottom: 24px;
+        :first-child{padding-right: 12px;}
+    }
+    .Time{
+        display: flex;
+        div{
+            width: 49.3%;
+            padding-right: 25px;
+        }
+    }
+
+}
+.topImg{
+    display: flex;
+    justify-content: flex-start;
+    p{
+        padding-left: 8px;
+        display: flex;
+        align-items: center;
+    }
+    img{
+        border-radius: 70px;
+        border: 4px solid #C2D0F9;
+    }
+    margin-bottom: 24px;
+}
+#DropOff{
+    margin-top: 32px;
+}
+.Steps{
+    color: var(--secondary-300, #90A3BF);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 21px */
+letter-spacing: -0.28px;
+}

@@ -1,0 +1,211 @@
+$persent: calc(1440 / 100);
+$ThisHeight: calc(743 / 100); // до плашки popular cars
+$heightpersent: calc(2120 / 100);
+
+.UpperSide{
+    display: flex;
+    justify-content: space-between;
+}
+.UpperSide.Hide {
+    display: none;
+}
+.leftCard{
+    flex: 0 0 49%;
+    border-radius: 10px;
+    background: var(--information-500, #54A6FF);
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.back{
+    padding: 24px;
+    background: url("src/components/HeroSection/img/Spiral.svg") -150px -40px/auto auto no-repeat;
+    width: 100%;
+    height: 100%;
+    color:#fff;
+
+    h1{
+        width: 42%;
+        height: 26.67%;
+        font-size: 1.7em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 0.96px;
+        margin-bottom:4.44% ;
+    }
+    p{
+        font-size: 1em;
+        width: 44.28%;
+        line-height: 150%;
+        letter-spacing: -0.32px;
+        margin-bottom:5.55% ;
+    }
+    button {
+        color: #fff;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background:#3563E9;
+        border: 0;
+    }
+    img{
+        padding-left:17%;
+    }
+}
+.RightCard{
+    flex: 0 0 49%;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    background: var(--information-500, #3563E9);
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.backTwo{
+    padding: 28px 24px;
+    background: url("src/components/HeroSection/img/arrows.svg");
+    width: 100%;
+    height: 100%;
+    color:#fff;
+
+    h1{
+        width: 42%;
+        height: 26.67%;
+        font-size: 1.7em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 0.96px;
+        margin-bottom:4.44% ;
+    }
+    p{
+        font-size: 1em;
+        width: 44.28%;
+        line-height: 150%;
+        letter-spacing: -0.32px;
+        margin-bottom:5.55% ;
+    }
+    button {
+        color: #fff;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background:#54A6FF;
+        border: 0;
+    }
+    img{
+        padding-left:17%;
+    }
+}
+
+/// Нижняя часть
+/// 
+/// 
+.LowerSide{
+    border-radius: 10px;
+    display: flex;
+    padding:32px 27px;
+    
+}
+.top{
+    display: flex;
+    justify-content: flex-start;
+    p{
+        padding-left: 8px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/// первая часть
+/// 
+.PickUp{
+    flex: 1 1 44%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 44%;
+    padding:16px 3.67% ;
+    img{
+        width: 16px;
+        border-radius: 70px;
+        border: 4px solid #C2D0F9;
+    }
+}
+
+/// 2 часть
+/// 
+
+.Arrows{
+    flex:1 1 11.2%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        padding: 18px;
+        background-color: #3563E9;
+        border-radius: 10px;
+    }
+} 
+
+/// 3 часть
+/// 
+
+.DropOff{
+    flex: 1 1 44%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding:16px 3.67% ;
+    img{
+        width: 16px;
+        border-radius: 70px;
+        border: 4px solid #C2D0F9;
+    }
+}
+.Content{
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-around;
+    div{
+        flex: 0 0 33%;
+        display: flex;
+        justify-content: start;
+        padding-left: 4.1%;
+        flex-direction: column;
+        p{
+            padding: 5%;
+            padding-left: 4%;
+            font-size: 0.8em;
+            color: #90A3BF;
+        }
+        select {
+            padding-left: 4%;
+            border: none;
+        }
+    }
+}
+.date{
+    border-left: 1px solid #90A3BF;
+    border-right: 1px solid #90A3BF;
+}
+.title{
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.32px;
+}

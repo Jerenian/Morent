@@ -1,0 +1,81 @@
+.Container{
+    padding: 5.55% 4.17%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+}
+.UpperSide{
+    border-bottom: 1px solid #13131329;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 7.5%;
+    .LeftUp{
+        flex:1 1 30%;
+        display: flex;
+        flex-direction: column;
+        h2{
+            color: var(--primary-500, #3563E9);
+            font-size: 2em;
+            font-weight: 700;   
+        }
+        p{
+            width: 97%;
+            padding-top:16px ;
+            color: rgba(19, 19, 19, 0.60);
+            font-size: 1em;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+            
+        }
+    }
+    .RightUp{
+        flex: 1 1 70%;
+        padding-left: 26.5%;
+        display: flex;
+        justify-content:space-around;
+        h3{
+            color: var(--secondary-500, #1A202C);
+            font-family: Plus Jakarta Sans;
+            font-size: 1.2em;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 30px */
+            letter-spacing: -0.4px;
+            ul{
+                padding-top: 4%;
+                color: rgba(19, 19, 19, 0.60);
+                display: flex;
+                flex-direction: column;
+
+                font-size: 0.8em;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%; 
+                letter-spacing: -0.32px;
+                li{
+                    padding-top: 1.5em;
+                }
+            }
+        }
+    }
+}
+.LowerSide{
+    padding-top: 7.5%;
+    display: flex;
+    justify-content: space-between;
+    .RightLow{
+        display: flex;
+        justify-content: space-between;
+        p{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        
+    }
+    .Terms{
+        padding-left: 60px;
+    }
+}
