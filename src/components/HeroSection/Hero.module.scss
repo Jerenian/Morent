@@ -4,117 +4,117 @@ $heightpersent: calc(2120 / 100);
 
 .UpperSide{
     display: flex;
-    justify-content: space-between;
+    align-items: stretch;
+    gap: 48px;
+        h1{
+            font-size: 1.7em;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: 0.96px;
+            margin-bottom:4.44% ;
+    
+        }
+        p{
+            font-size: 1em;
+            width: 44.28%;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+            margin-bottom:5.55% ;
+    
+        }
+        button {
+            color: #fff;
+            display: flex;
+            width: 120px;
+            height: 44px;
+            padding: 0px 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            background:#54A6FF;
+            border: 0;
+        }
 }
 .UpperSide.Hide {
     display: none;
+
 }
 .leftCard{
-    flex: 0 0 49%;
+    flex: 1 1 50%;
     border-radius: 10px;
-    background: var(--information-500, #54A6FF);
+    background:#54A6FF;
     display: block;
     overflow: hidden;
-    box-sizing: border-box;
 }
 .back{
-    padding: 24px;
-    background: url("src/components/HeroSection/img/Spiral.svg") -150px -40px/auto auto no-repeat;
+    padding: 34px;
+    background: url("src/components/HeroSection/img/Spiral.svg") -125px 0/cover no-repeat ;
     width: 100%;
     height: 100%;
     color:#fff;
-
-    h1{
-        width: 42%;
-        height: 26.67%;
-        font-size: 1.7em;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: 0.96px;
-        margin-bottom:4.44% ;
-    }
-    p{
-        font-size: 1em;
-        width: 44.28%;
-        line-height: 150%;
-        letter-spacing: -0.32px;
-        margin-bottom:5.55% ;
-    }
-    button {
-        color: #fff;
-        display: flex;
-        width: 120px;
-        height: 44px;
-        padding: 0px 20px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        background:#3563E9;
-        border: 0;
-    }
-    img{
-        padding-left:17%;
+    display: block;
+    @media (max-width: 1024px) {
+        padding:6px 16px 0px 16px  ;
+        h1{
+            width: 80%;
+            font-size: 4vw;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: 0.96px;
+            margin-bottom:4.44%;
+        }
+        p{
+            width: 80%;
+            font-size: 2.5vw;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+            margin-bottom:5.55% ;
+    
+        }
+        button {
+            color: #fff;
+            display: flex;
+            width: 120px;
+            height: 44px;
+            padding: 0px 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            background:#3563E9;
+            border: 0;
+            margin-bottom: 24px;
+        }
     }
 }
-.RightCard{
-    flex: 0 0 49%;
+.RightCard{    
+    flex: 1 1 50%;
     border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    background: var(--information-500, #3563E9);
+    background:#3563E9;
     display: block;
     overflow: hidden;
-    box-sizing: border-box;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
 }
 .backTwo{
-    padding: 28px 24px;
-    background: url("src/components/HeroSection/img/arrows.svg");
-    width: 100%;
-    height: 100%;
+    display: block;
+    background: url("src/components/HeroSection/img/arrows.svg")-75px 0/cover no-repeat ;
+    min-height: 100%;
     color:#fff;
+    padding: 28px 24px 0px 24px;
 
-    h1{
-        width: 42%;
-        height: 26.67%;
-        font-size: 1.7em;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: 0.96px;
-        margin-bottom:4.44% ;
-    }
-    p{
-        font-size: 1em;
-        width: 44.28%;
-        line-height: 150%;
-        letter-spacing: -0.32px;
-        margin-bottom:5.55% ;
-    }
-    button {
-        color: #fff;
-        display: flex;
-        width: 120px;
-        height: 44px;
-        padding: 0px 20px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        background:#54A6FF;
-        border: 0;
-    }
-    img{
-        padding-left:17%;
-    }
 }
-
 /// Нижняя часть
-/// 
-/// 
 .LowerSide{
     border-radius: 10px;
     display: flex;
     padding:32px 27px;
+    @media (max-width:1024px) {
+        flex-direction: column;
+        padding:32px 0;
+    }
     
 }
 .top{
@@ -126,17 +126,32 @@ $heightpersent: calc(2120 / 100);
         align-items: center;
     }
 }
+.CarImageLeft{
+    padding-left:18%;
+    width: 100%;
+    img{
+        width: 60%;
+    }
+}
+.CarImageRight{
+    padding-left: 28%;
+    width: 100%;
+    img{
+        width: 60%;
+    }
+}
 
 /// первая часть
-/// 
 .PickUp{
     flex: 1 1 44%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    width: 44%;
     padding:16px 3.67% ;
+    @media (max-width: 1024px) {
+        margin-bottom: 16px;
+    }
     img{
         width: 16px;
         border-radius: 70px;
@@ -145,7 +160,6 @@ $heightpersent: calc(2120 / 100);
 }
 
 /// 2 часть
-/// 
 
 .Arrows{
     flex:1 1 11.2%;
@@ -153,15 +167,18 @@ $heightpersent: calc(2120 / 100);
     display: flex;
     justify-content: center;
     align-items: center;
+
     div{
         padding: 18px;
         background-color: #3563E9;
         border-radius: 10px;
+        @media (max-width: 1024px) {
+            position: absolute;
+        }
     }
 } 
 
 /// 3 часть
-/// 
 
 .DropOff{
     flex: 1 1 44%;
@@ -170,6 +187,9 @@ $heightpersent: calc(2120 / 100);
     flex-direction: column;
     background-color: #fff;
     padding:16px 3.67% ;
+    @media (max-width: 1024px) {
+        margin-top: 16px;
+    }
     img{
         width: 16px;
         border-radius: 70px;

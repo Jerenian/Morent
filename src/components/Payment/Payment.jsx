@@ -1,6 +1,5 @@
 import React from "react";
 import Billing from "./Billing/Billing";
-import Header from "../MainHeader/Header/Header";
 import classes from "./Payment.module.scss"
 import Summary from "./Summary/Summary";
 import Conf from "./Conf/Conf";

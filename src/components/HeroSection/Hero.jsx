@@ -2,7 +2,8 @@ import React from "react";
 import classes from "./Hero.module.scss"
 import "./Hero.css"
 import {Link } from "react-router-dom";
-const Hero = ({navVisible}) => {
+
+export const Hero = ({navVisible}) => {
 
     const rootclasses = [classes.UpperSide]
     if(navVisible){
@@ -13,28 +14,23 @@ const Hero = ({navVisible}) => {
             <div className = {rootclasses.join(" ")}>
             
                 <div className={classes.leftCard} >
-                    <Link to = "/Comments/1" >
-                    <div className={classes.back}>
-                        <h1>The Best Platform for Car Rental</h1>
+                    <Link className={classes.back} to = "/Comments/1" >
+                        <h1>The Best Platform <br /> for Car Rental</h1>
                         <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
-                        <button onClick={(e) => e.preventDefault} style={{cursor : 'pointer'}} type="submit"> Rental Car </button>
-                        <img src="src/components/HeroSection/img/Hero.png" alt="" />
-                    </div>
+                        <button> Rental Car </button>
+                        <div className={classes.CarImageLeft}> <img src="src/components/HeroSection/img/Hero.png" alt="" /></div>
                     </Link>
                 </div>
                 
                 
                 <div className={classes.RightCard}>
-                    <Link to = "/Comments/2" >
-                    <div className={classes.backTwo}>
-                    <h1>The Best Platform for Car Rental</h1>
-                        <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
+                    <Link className={classes.backTwo} to = "/Comments/2" >
+                        <h1>Easy way to rent a <br /> car at a low price</h1>
+                        <p>Providing cheap car rental services and safe and comfortable facilities.</p>
                         <button>Rental Car</button>
-                        <img src="src/components/HeroSection/img/HeroTwo.png" alt="" />
-                    </div>
+                        <div className={classes.CarImageRight}> <img src="src/components/HeroSection/img/HeroTwo.png" alt="" /></div>
                     </Link>
                 </div>
-                
             </div>
             <div className={classes.LowerSide}>
                 <div className={classes.PickUp}>
@@ -84,8 +80,7 @@ const Hero = ({navVisible}) => {
 
                 </div>
             </div>
+
         </div>
     )
 }
-
-export default Hero

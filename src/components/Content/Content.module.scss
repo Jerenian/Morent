@@ -1,4 +1,7 @@
 .Cards{
     padding-left: 64px;
     padding-right: 64px;
+    @media (max-width:1024px) {
+        padding: 0 23px;
+    }
 }

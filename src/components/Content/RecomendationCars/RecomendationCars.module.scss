@@ -14,13 +14,14 @@
     display: flex;
     margin-bottom: 3.7%;
     flex-wrap: wrap;
+    justify-content: start;
+    gap: 32px;
+
 }
 .List{
     display: flex;
     justify-content: start;
-    flex: 1 1 23%;
     padding-bottom: 10px;
-
 }    
 .Card{
     margin-bottom: 8.16%;
@@ -37,16 +38,15 @@
             flex-direction: column;
         }
         h2{
-            color: var(--secondary-500, #1A202C);
+            color: #1A202C;
             font-size: 1.4em;
             font-style: normal;
             font-weight: 700;
-            line-height: 150%; /* 30px */
+            line-height: 150%; 
             letter-spacing: -0.6px;
         }
         p{
-            color: var(--secondary-300, #90A3BF);
-            font-family: Plus Jakarta Sans;
+            color: #90A3BF;
             font-size: 14px;
             font-style: normal;
             font-weight: 700;
@@ -87,7 +87,7 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    button{
+    .Rent{
         border-radius: 4px;
         background: var(--primary-500, #3563E9);
         border: 0;
@@ -95,6 +95,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
     }
 }
 .Actual{
@@ -127,6 +128,7 @@
     padding-bottom:3.8% ;
     display: flex;
     justify-content: center;
+    cursor: pointer;
     button{
         border-radius: 4px;
         background: var(--primary-500, #3563E9);
@@ -140,4 +142,23 @@
         padding: 20px;
         color: #fff;
     }
+    a{
+        cursor: pointer;
+        background-color: red;
+    }
+}
+
+// .Rent{
+//     transition: 0.2s;
+//     cursor: pointer;
+//     padding: 8px;
+//     border-radius: 4px;
+//     background:  #3563E9;
+//     border: none;
+// }
+.Rent:hover{
+    background-color: #3562e995;
+}
+.Card:hover{
+    box-shadow: 5px 5px 15px #0000007a;
 }

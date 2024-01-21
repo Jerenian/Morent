@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from "react";
-import classes from "./PopularCars.module.scss"
+import classes from "../Content/PopularCars/PopularCars.module.scss"
 import Favorite from "./Favorite/Favorite";
-import { gas } from "../../../assets/icons/gas";
-import { manual } from "../../../assets/icons/manual";
-import { People } from "../../../assets/icons/People";
-import { motion } from "framer-motion";
-
+import { gas } from "../../assets/icons/gas";
+import { People } from "../../assets/icons/People";
+import { manual } from "../../assets/icons/manual";
 import {Link} from "react-router-dom";
-const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
+
+const PopCars = ({setChousenCar, navVisible, car, i}) => {
     const rootclasses = [classes.Card]
     const [index, setIndex] = useState({i})
     function HideCards(i){
@@ -22,8 +21,8 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
     }
     return (
         
-        <motion.div className={classes.List}>
-            <Link to = {`/Comments/${car.id}`}>
+        <div className={classes.List}>
+            <Link className={classes.Link} to = {`/Comments/${car.id}`}>
         <div id={i} onClick={() => setIndex()} key={i} className={rootclasses.join(" ")}>
             <div className={classes.Header}>
                 <div className={classes.Name}>
@@ -33,19 +32,19 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
                 <Favorite></Favorite>
             </div>
             <div className={classes.img}>
-                <img  src={car.src} alt="" />
+                <img  src={`${location.origin}/${car.src}`} alt="" />
             </div>
             <div className={classes.row} >
                 <div>
-                        {gas}
+                    {gas}
                     <p className={classes.Characteristics}>{car.gas}L</p>
                 </div>
                 <div>
-                        {manual}
+                    {manual}
                     <p className={classes.Characteristics}>{car.manual}</p>
                 </div>
                 <div>
-                        {People}
+                    {People}
                     <p className={classes.Characteristics}>{car.People} People</p>
                 </div>
             </div>
@@ -54,12 +53,12 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
                     <div className={classes.Actual}>$ {car.cost} / <em>day</em>  </div>
                     <div className={classes.Old}>{car.oldCost} </div>
                 </div>
-                <Link to= {`/Payment/${car.id}`} > <button className={classes.Rent} onClick={ () => setChousenCar(car)} >Rent now </button> </Link>
+                <Link className={classes.Rent} to= {`/Payment/${car.id}`} >Rent now </Link>
             </div>
         </div>
         </Link>
-    </motion.div>
-
+    </div>
+  
     )
 }
-export default SetPopCars
+export default PopCars

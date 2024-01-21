@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PopCarArray } from "../../CarArray";
 import SetPopCars from "./SetPopCars";
 import classes from  "./PopularCars.module.scss"
+import {motion} from "framer-motion"
 const PopularCars = ({setChousenCar, navVisible}) => {
-
+    const [width, setWidth] = useState(0)
+    const Slides = useRef()
     const CardPopList = PopCarArray.map((car, i) => (
         <SetPopCars setChousenCar = {setChousenCar} navVisible = {navVisible} car = {car} i = {i} />
     ))
+
+    useEffect(() => {
+
+    }, [])
 
     return (
         <div className={classes.Wrapper}>
@@ -14,9 +20,11 @@ const PopularCars = ({setChousenCar, navVisible}) => {
                 <h1>Popular Cars</h1>
                 <a href="">View All</a>
             </div>
-            <div className={classes.Container}>
-                    {CardPopList}
-            </div>
+            <motion.div ref = {Slides}  className={classes.Container}>
+                <motion.div drag = "x" dragConstraints = {{right : 0, left:-900}} className={classes.carusel}>
+                   {CardPopList}
+                </motion.div>
+            </motion.div>
         </div>
     )
 }

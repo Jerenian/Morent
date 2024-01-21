@@ -1,11 +1,11 @@
 import React from "react";
-import classes from "./RecomendationCars.module.scss"
+import classes from "../Content/RecomendationCars/RecomendationCars.module.scss"
 import Favorite from "./Favorite/Favorite";
-import { gas } from "../../../assets/icons/gas";
-import { manual } from "../../../assets/icons/manual";
-import { People } from "../../../assets/icons/People";
+import { gas } from "../../assets/icons/gas";
+import { People } from "../../assets/icons/People";
+import { manual } from "../../assets/icons/manual";
 import {Link} from "react-router-dom";
-const SetRecCars = ({car, setChousenCar}) => {
+const RecCars = ({car, setChousenCar}) => {
 return (
     <>
         <div className={classes.List}>
@@ -19,19 +19,19 @@ return (
                     <Favorite></Favorite>
                 </div>
                 <div className={classes.img}>
-                    <img src={car.src} alt="" />
+                    <img src={`${location.origin}/${car.src}`} alt="" />
                 </div>
                 <div className={classes.row} >
                     <div>
-                        {gas}
+                    {gas}
                         <p className={classes.Characteristics}>{car.gas}L</p>
                     </div>
                     <div>
-                        {manual}
+                    { manual }
                         <p className={classes.Characteristics}>{car.manual}</p>
                     </div>
                     <div>
-                            {People}
+                        {People}
                         <p className={classes.Characteristics}>{car.People} People</p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ return (
                         <div className={classes.Actual}>$ {car.cost} / <em>day</em>  </div>
                         <div className={classes.Old}>{car.oldCost} </div>
                     </div>
-                    <Link to={`/Payment/${car.id}`} >  <button className={classes.Rent} onClick={ () => setChousenCar(car)} >Rent now </button> </Link>
+                    <Link className={classes.Rent} to= {`/Payment/${car.id}`} >Rent now </Link>
                 </div>
             </div>
             </Link>
@@ -48,4 +48,4 @@ return (
 </>
 )
 }
-export default SetRecCars
+export default RecCars

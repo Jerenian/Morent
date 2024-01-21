@@ -3,6 +3,7 @@ import { ReviewsArr } from './ReviewsArr'
 import classes from '../Comment/Comment.module.scss'
 import { useEffect } from 'react'
 import { star } from '../../../public/assets/stra'
+
 const Reviews = ({show}) => {
     let comment = ReviewsArr
 
@@ -14,7 +15,7 @@ const Reviews = ({show}) => {
         comment = comment.concat(ReviewsArr)
         comment.length = comment.length - 1
     }
-    const starQ = comment.filter(Rating)
+
   return (
     <div className={classes.Reviews}>
         <h2 className={classes.titleReviews}>Reviews <strong className={classes.strongStyle}>{comment.length}</strong></h2>
