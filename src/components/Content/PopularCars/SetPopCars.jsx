@@ -1,30 +1,44 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import classes from "./PopularCars.module.scss"
 import Favorite from "./Favorite/Favorite";
 import { gas } from "../../../assets/icons/gas";
 import { manual } from "../../../assets/icons/manual";
 import { People } from "../../../assets/icons/People";
 import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 
 import {Link} from "react-router-dom";
 const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
+    const ref = useRef()
     const rootclasses = [classes.Card]
+    useEffect(() => {
+        ref
+    }, [])
     const [index, setIndex] = useState({i})
     function HideCards(i){
         if(i > 2) {
             rootclasses.push(classes.Hide)
         }
     }
+    const isInView = useInView(ref , { margin: "0px -200px 0px 0px", once : false
+      })
     
     
     if(navVisible){
          HideCards(index.i)
     }
+    console.log(isInView)
     return (
         
-        <motion.div className={classes.List}>
+        <motion.div 
+        ref={ref}
+        className={classes.List}
+        style={{
+            opacity : isInView ? 1 : 0.3
+        }}>
+
             <Link to = {`/Comments/${car.id}`}>
-        <div id={i} onClick={() => setIndex()} key={i} className={rootclasses.join(" ")}>
+        <div  id={i} onClick={() => setIndex()} key={i} className={rootclasses.join(" ")}>
             <div className={classes.Header}>
                 <div className={classes.Name}>
                     <h2>{car.name}</h2>
