@@ -7,11 +7,8 @@ const PopularCars = ({setChousenCar, navVisible}) => {
     const [width, setWidth] = useState(0)
     const Slides = useRef()
     const CardPopList = PopCarArray.map((car, i) => (
-        <SetPopCars Slides = {Slides} setChousenCar = {setChousenCar} navVisible = {navVisible} car = {car} i = {i} />
+        <SetPopCars  setChousenCar = {setChousenCar} navVisible = {navVisible} car = {car} i = {i} />
     ))
-        useEffect(() => {
-            
-        }, [])
 
     return (
         <div className={classes.Wrapper}>

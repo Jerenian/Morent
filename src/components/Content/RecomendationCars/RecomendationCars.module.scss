@@ -22,7 +22,14 @@
     display: flex;
     justify-content: start;
     padding-bottom: 10px;
-}    
+}   
+.CarItem{
+    @media (max-width:769px) {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+} 
 .Card{
     margin-bottom: 8.16%;
     padding: 24px;
@@ -30,6 +37,10 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    @media (max-width:769px){padding: 16px;}
+    svg{
+        @media (max-width:769px){width: 12px;}
+    }
     .Header{
         display: flex;
         justify-content: space-between;
@@ -47,7 +58,7 @@
         }
         p{
             color: #90A3BF;
-            font-size: 14px;
+            font-size: 12px;
             font-style: normal;
             font-weight: 700;
             line-height: 150%;
@@ -56,7 +67,15 @@
     }
     .img{
         padding-top: 20%;
+        height: 112px;
+        @media (max-width:769px) {
+            padding: 0;
+        }
         img{
+            @media (max-width:769px) {
+                padding: 0;
+                width: 160px;
+            }
             width: 204px;
         }
     }
@@ -64,6 +83,12 @@
         padding-top: 11.7%;
         display: flex;
         justify-content: space-between;
+        @media (max-width:769px) {
+            flex-direction: column;
+            padding-top: 0;
+            align-items: start;
+
+        }
         div{
             display: flex;
             justify-content: space-around;
@@ -90,12 +115,24 @@
     .Rent{
         border-radius: 4px;
         background: var(--primary-500, #3563E9);
-        border: 0;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
+            border: 0;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 116px;
+            height: 44px;
+            text-decoration: none;
+        @media (max-width:769px) {
+            display: flex;
+            width: 100px;
+            height: 36px;
+            padding: 0px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
     }
 }
 .Actual{
@@ -123,13 +160,26 @@
     line-height: normal;
     text-decoration: line-through;
 }
+.RentLink{
+    display: flex;
+    @media (max-width:769px) {
+        display: flex;
+        width: 100px;
+        height: 36px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+}
 .ButtonContainer{
     padding-top: 6.32%;
     padding-bottom:3.8% ;
     display: flex;
     justify-content: center;
     cursor: pointer;
-    button{
+    .Showbtn{
         border-radius: 4px;
         background: var(--primary-500, #3563E9);
         border: 0;
@@ -141,10 +191,6 @@
         letter-spacing: -0.32px;
         padding: 20px;
         color: #fff;
-    }
-    a{
-        cursor: pointer;
-        background-color: red;
     }
 }
 

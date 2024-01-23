@@ -18,29 +18,31 @@ return (
                     </div>
                     <Favorite></Favorite>
                 </div>
-                <div className={classes.img}>
-                    <img src={car.src} alt="" />
-                </div>
-                <div className={classes.row} >
-                    <div>
-                        {gas}
-                        <p className={classes.Characteristics}>{car.gas}L</p>
-                    </div>
-                    <div>
-                        {manual}
-                        <p className={classes.Characteristics}>{car.manual}</p>
-                    </div>
-                    <div>
-                            {People}
-                        <p className={classes.Characteristics}>{car.People} People</p>
-                    </div>
-                </div>
+                    <div className={classes.CarItem}>
+                        <div className={classes.img}>
+                            <img src={car.src} alt="" />
+                        </div>
+                        <div className={classes.row} >
+                            <div>
+                                {gas}
+                                <p className={classes.Characteristics}>{car.gas}L</p>
+                            </div>
+                            <div>
+                                {manual}
+                                <p className={classes.Characteristics}>{car.manual}</p>
+                            </div>
+                            <div>
+                                    {People}
+                                <p className={classes.Characteristics}>{car.People} People</p>
+                            </div>
+                        </div>
+                     </div>
                 <div className={classes.footer}>
                     <div className={classes.cost}>
                         <div className={classes.Actual}>$ {car.cost} / <em>day</em>  </div>
                         <div className={classes.Old}>{car.oldCost} </div>
                     </div>
-                    <Link to={`/Payment/${car.id}`} >  <button className={classes.Rent} onClick={ () => setChousenCar(car)} >Rent now </button> </Link>
+                    <Link className={classes.RentLink} to={`/Payment/${car.id}`} >  <button className={classes.Rent} onClick={ () => setChousenCar(car)} >Rent now </button> </Link>
                 </div>
             </div>
             </Link>

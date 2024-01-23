@@ -1,12 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import classes from "../Content/PopularCars/PopularCars.module.scss"
 import Favorite from "./Favorite/Favorite";
 import { gas } from "../../assets/icons/gas";
 import { People } from "../../assets/icons/People";
 import { manual } from "../../assets/icons/manual";
 import {Link} from "react-router-dom";
+import {motion, useInView} from "framer-motion"
 
 const PopCars = ({setChousenCar, navVisible, car, i}) => {
+    const ref = useRef()
     const rootclasses = [classes.Card]
     const [index, setIndex] = useState({i})
     function HideCards(i){
@@ -14,14 +16,21 @@ const PopCars = ({setChousenCar, navVisible, car, i}) => {
             rootclasses.push(classes.Hide)
         }
     }
-    
+    const isInView = useInView(ref , { margin: "0px -200px 0px -200px", once : false
+})
     
     if(navVisible){
          HideCards(index.i)
     }
     return (
         
-        <div className={classes.List}>
+        <motion.div 
+        ref={ref}
+        className={classes.List}
+        style={{
+            transition: '1s',
+            opacity : isInView ? 1 : 0.3
+        }}>
             <Link className={classes.Link} to = {`/Comments/${car.id}`}>
         <div id={i} onClick={() => setIndex()} key={i} className={rootclasses.join(" ")}>
             <div className={classes.Header}>
@@ -57,7 +66,7 @@ const PopCars = ({setChousenCar, navVisible, car, i}) => {
             </div>
         </div>
         </Link>
-    </div>
+    </motion.div>
   
     )
 }

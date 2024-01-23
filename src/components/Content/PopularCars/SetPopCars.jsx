@@ -20,7 +20,7 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
             rootclasses.push(classes.Hide)
         }
     }
-    const isInView = useInView(ref , { margin: "0px -200px 0px 0px", once : false
+    const isInView = useInView(ref , { margin: "0px -200px 0px -200px", once : false
       })
     
     
@@ -34,6 +34,7 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
         ref={ref}
         className={classes.List}
         style={{
+            transition: '1s',
             opacity : isInView ? 1 : 0.3
         }}>
 

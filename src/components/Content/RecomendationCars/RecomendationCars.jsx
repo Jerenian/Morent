@@ -18,7 +18,7 @@ const RecomendationCars = ({setChousenCar}) => {
             {CardRecList}
         </div>
         <div className={classes.ButtonContainer}>
-        <button className={classes.button}>Show more car</button>
+        <button className={classes.Showbtn}>Show more car</button>
     </div>
     </div>
     )

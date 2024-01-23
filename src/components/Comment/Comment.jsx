@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import classes from '../Comment/Comment.module.scss'
 import Favorite from "../Content/PopularCars/Favorite/Favorite";
 import { useState } from "react";
@@ -11,6 +11,7 @@ import { RecCarArr } from "../CarArray";
 import { AllCars } from "../CarArray";
 import RecCars from "./RecCars";
 import PopCars from "./PopCars";
+import {motion} from 'framer-motion'
 
 // const CardPopList4 = PopCarArray.map((car, i) => (
 
@@ -135,9 +136,15 @@ const Comment = ({navVisible}) => {
                 </div>
             </div>
             <div className={classes.Cars}>
-                <div className={classes.popCars}>
-                    {CardPopList}
-                </div>
+            <motion.div   className={classes.popCars}>
+                <motion.div 
+                 drag = "x"
+                 dragConstraints = {{right : 0, left:-900}} 
+                //  ref = {Slides} 
+                 className={classes.carusel}>
+                   {CardPopList}
+                </motion.div>
+            </motion.div>
                 <div className={classes.recCars} >
                     {CardRecList}
                 </div>

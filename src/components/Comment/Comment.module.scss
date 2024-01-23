@@ -300,9 +300,22 @@
         margin-bottom: 3.7%;
         gap: 32px;
         justify-content: center;
-
-
-    }
+        .carusel{
+            padding-top: 30px;
+            display: flex;
+            margin-bottom: 3.7%;
+            gap: 32px;
+            justify-content: start;
+            cursor: grab;
+            @media (max-width:765px) {
+                flex-wrap: nowrap;
+                justify-content: start;
+               
+            }
+          
+        }
+        }
+    
     .recCars{
         display: flex;
         gap: 32px;

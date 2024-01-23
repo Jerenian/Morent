@@ -18,21 +18,23 @@ return (
                     </div>
                     <Favorite></Favorite>
                 </div>
-                <div className={classes.img}>
-                    <img src={`${location.origin}/${car.src}`} alt="" />
-                </div>
-                <div className={classes.row} >
-                    <div>
-                    {gas}
-                        <p className={classes.Characteristics}>{car.gas}L</p>
-                    </div>
-                    <div>
-                    { manual }
-                        <p className={classes.Characteristics}>{car.manual}</p>
-                    </div>
-                    <div>
-                        {People}
-                        <p className={classes.Characteristics}>{car.People} People</p>
+                    <div className={classes.CarItem}>
+                        <div className={classes.img}>
+                            <img src={`${location.origin}/${car.src}`} alt="" />
+                        </div>
+                        <div className={classes.row} >
+                            <div>
+                            {gas}
+                                <p className={classes.Characteristics}>{car.gas}L</p>
+                            </div>
+                            <div>
+                            { manual }
+                                <p className={classes.Characteristics}>{car.manual}</p>
+                            </div>
+                            <div>
+                                {People}
+                                <p className={classes.Characteristics}>{car.People} People</p>
+                            </div>
                     </div>
                 </div>
                 <div className={classes.footer}>
