@@ -12,7 +12,6 @@ $heightpersent: calc(2120 / 100);
     padding-right: calc(60 / $persent * 1%);
     padding-top : calc(40 / $heightpersent * 1%);
     border-bottom: 1px solid rgba(195, 212, 233, 0.40);
-
 }
 //~~~~~~~~~~~LEFTSIDE~~~~~~~~~~//
 
@@ -25,8 +24,10 @@ $heightpersent: calc(2120 / 100);
         display: flex;
         align-items: center;
         text-transform: uppercase;
-        color: var(--primary-500, #3563E9);
+        color: #3563E9;
         font-size: 2vw;
+        border: none; outline: none;
+        background: transparent;
     }
 }
 

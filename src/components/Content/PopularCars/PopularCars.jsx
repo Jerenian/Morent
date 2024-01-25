@@ -9,7 +9,10 @@ const PopularCars = ({setChousenCar, navVisible}) => {
     const CardPopList = PopCarArray.map((car, i) => (
         <SetPopCars  setChousenCar = {setChousenCar} navVisible = {navVisible} car = {car} i = {i} />
     ))
-
+        useEffect(() => {
+            setWidth(Slides.current.scrollWidth - Slides.current.offsetWidth)
+        }, [])
+        
     return (
         <div className={classes.Wrapper}>
             <div className={classes.title}>
@@ -19,7 +22,7 @@ const PopularCars = ({setChousenCar, navVisible}) => {
             <motion.div   className={classes.Container}>
                 <motion.div 
                  drag = "x"
-                 dragConstraints = {{right : 0, left:-900}} 
+                 dragConstraints = {{right : 0, left:-width }} 
                  ref = {Slides} 
                  className={classes.carusel}>
                    {CardPopList}

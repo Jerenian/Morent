@@ -3,10 +3,10 @@ $SidesPersent: calc($persent / 2);
 $heightPersent: calc((40 + 44) / 100);
 .form{
     border-radius: 70px;
-    border: 1px solid #000;
+    border: 1px solid rgba(195, 212, 233, 0.40);
     display: flex;
     width: calc(492 / $SidesPersent * 1%);
-    outline: auto;
+    outline: none;
     padding-left:calc(20 / $SidesPersent * 1%) ;
     padding-right:calc(20 / $SidesPersent * 1%) ;
     padding-top: 10px;
@@ -21,7 +21,7 @@ $heightPersent: calc((40 + 44) / 100);
     padding-right: 1%;
     width: 100%;
     border: 0px ;
-    outline:none;
+    outline: none;
     @media (max-width:1280px ) {
         font-size: 1.5vw;
     }

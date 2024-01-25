@@ -27,31 +27,19 @@ import {motion} from 'framer-motion'
 
 const Comment = ({navVisible}) => {
     const {id} = useParams()
-    const [img, setImg] = useState()
     const [show, setShow] = useState(false)
-    const [style, setstyle] = useState(false)
-    const [chosen, setchosen] = useState(true)
-    
-        const MainImage = (el) => {
-            if(el.className === 'other'){
-                setstyle(true)
-                setImg(el.src)
-                console.log(el.clientHeight)
-            }
-            else{
-                setstyle(false)
-                setImg(`${location.origin}/${Car.src}`)
-                
-        }
-        }
+    const [width, setWidth] = useState(0)
         const Car = AllCars.filter((car) => car.id == id)[0]
-
+        const CardPopList = PopCarArray.map((car, i) => (
+            <PopCars  navVisible = {navVisible} car = {car} i = {i} />
+        ))
+        const Slides = useRef()
         useEffect(() => {
-            if(Car.src){
-                setImg(
-                    `${location.origin}/${Car.src}`)
-            }
+            setWidth(Slides.current.scrollWidth - Slides.current.offsetWidth)
         }, [])
+        const CardRecList = RecCarArr.map((car) => (
+            <RecCars car = {car}/>
+        ))
         let textButton
         if(show){
             textButton = "Hide"
@@ -59,35 +47,30 @@ const Comment = ({navVisible}) => {
         else{
             textButton = "Show All"
         }
-        const CardPopList = PopCarArray.map((car, i) => (
-            <PopCars  navVisible = {navVisible} car = {car} i = {i} />
-        ))
-        const CardRecList = RecCarArr.map((car) => (
-            <RecCars car = {car}/>
-        ))
+
     return (
         <div className={classes.Container}>
             <div className={classes.UpperSide}>
                 <div className={classes.Images}> 
-                    <div data-selector = {style} className={classes.backImg}>
-                        <div id={classes['mainImg']} data-selector= {style} className={classes.BigImg} >
-                            <div className={classes.heroText}>
-                                <h2 className={classes.heroTitle}>
+                    <div className={classes.Hero}> {/* контейнер */}
+                         <div className={classes.HeroBack} > {/* svg бекграунд */}
+                            <div className={classes.HeroText}>  
+                                <h2 className={classes.HeroTitle}>
                                     Sports car with the best <br /> design and acceleration
                                 </h2>
-                                <p className={classes.heroSubtitle}>
+                                <p className={classes.HeroSubtitle}>
                                     Safety and comfort while driving a <br /> futuristic and elegant sports car
                                 </p>
                             </div>
-                            <img src={img} alt="" />
+                            <div className={classes.HeroImageContainer}>
+                                <img className={classes.HeroImg} src={`${location.origin}/${Car.src}`} alt="" />
+                            </div>
                         </div>
                     </div>
-                     <ul   className={classes.rowImges}>
-                        <div  className={classes.back} onClick={ (e) => MainImage(e.target)} >
-                                <li data-selector = {style} id={classes['mainImg']}  ><img id={classes['secImg']}  className={classes.TheCar}  src={`${location.origin}/${Car.src}`} /></li>
-                        </div>
-                        <li data-selector = {style} id = {classes['secImg']} onClick={ (e) => MainImage(e.target)} ><img id={classes['secImg']}  className="other"  src={`${location.origin}/public/assets/View 2.png`}  /></li>
-                        <li data-selector = {style} id = {classes['secImg']}onClick={ (e) => MainImage(e.target)} ><img id={classes['secImg']} className="other"  src={`${location.origin}/public/assets/View 3.png`} /></li>
+                    <ul   className={classes.rowImges}>
+                        <li className={classes.rowImageTheCar} ><div className={classes.rowImageTheCarback}><img  className={classes.TheCar}  src={`${location.origin}/${Car.src}`} /></div></li>
+                        <li><img src={`${location.origin}/public/assets/View 2.png`}  /></li>
+                        <li><img src={`${location.origin}/public/assets/View 3.png`} /></li>
                     </ul>
                 </div>
                  {/* спираль пропадает вероятнее всего из за того что data - selector не принимает true */}
@@ -137,10 +120,10 @@ const Comment = ({navVisible}) => {
             </div>
             <div className={classes.Cars}>
             <motion.div   className={classes.popCars}>
-                <motion.div 
+            <motion.div 
                  drag = "x"
-                 dragConstraints = {{right : 0, left:-900}} 
-                //  ref = {Slides} 
+                 dragConstraints = {{right : 0, left:-width}} 
+                 ref = {Slides} 
                  className={classes.carusel}>
                    {CardPopList}
                 </motion.div>

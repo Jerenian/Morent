@@ -6,6 +6,9 @@ $heightpersent: calc(2120 / 100);
     display: flex;
     align-items: stretch;
     gap: 48px;
+    &[data-selector="true"] {
+        display: none;
+    }
         h1{
             font-size: 1.7em;
             font-style: normal;
@@ -72,19 +75,20 @@ $heightpersent: calc(2120 / 100);
             margin-bottom:5.55% ;
     
         }
-        button {
-            color: #fff;
-            display: flex;
-            width: 120px;
-            height: 44px;
-            padding: 0px 20px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 4px;
-            background:#3563E9;
-            border: 0;
-            margin-bottom: 24px;
-        }
+
+    }
+    .leftCardbtn {
+        color: #fff;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background:#3563E9;
+        border: 0;
+        margin-bottom: 24px;
     }
 }
 .RightCard{    
@@ -96,8 +100,23 @@ $heightpersent: calc(2120 / 100);
     @media (max-width: 1024px) {
         display: none;
     }
-
+    .rightCardbtn {
+        color: #fff;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background:#54A6FF;
+        border: 0;
+        margin-bottom: 24px;
+    }
 }
+    
+
+
 .backTwo{
     display: block;
     background: url("src/components/HeroSection/img/arrows.svg")-75px 0/cover no-repeat ;

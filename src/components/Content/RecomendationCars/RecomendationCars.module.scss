@@ -68,9 +68,6 @@
     .img{
         padding-top: 20%;
         height: 112px;
-        @media (max-width:769px) {
-            padding: 0;
-        }
         img{
             @media (max-width:769px) {
                 padding: 0;
@@ -87,6 +84,8 @@
             flex-direction: column;
             padding-top: 0;
             align-items: start;
+            justify-content: start;
+            gap: 16px;
 
         }
         div{
@@ -96,12 +95,19 @@
             p{
                 padding-left: 4px;
                 padding-right: 16px;
-                color: var(--secondary-300, #90A3BF);
+                color:  #90A3BF;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 150%;
                 letter-spacing: -0.28px;
+                @media (max-width:769px) {
+                    flex-direction: column;
+                    padding-top: 0;
+                    align-items: start;
+                    font-size: 12px;
+        
+                }
             }
             
         }
@@ -114,7 +120,7 @@
     flex-grow: 1;
     .Rent{
         border-radius: 4px;
-        background: var(--primary-500, #3563E9);
+        background:#3563E9;
             border: 0;
             color: #fff;
             display: flex;

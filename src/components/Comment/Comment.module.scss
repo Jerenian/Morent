@@ -1,202 +1,228 @@
 .Container{
     padding: 0 34px;
+    @media (max-width:540px) {
+        padding: 24px;
+    }
 }
+
 .UpperSide{
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     margin-bottom: 32px;
-
-    .backImg{
-        margin-bottom: 24px;
-        border-radius: 10px;
-        background:  #54A6FF;
-        display: block;
-        overflow: hidden;
-        box-sizing: border-box;
-        &[data-selector="true"] {
-            background: rgba(0, 0, 0, 0);
-        }
-    }
-    #secImg{
-        display: flex;
-        flex-grow: 1;
+    gap: 32px;
+    @media (max-width:768px) {
+        flex-direction: column;
+        
     }
     .Images{
         position: relative;
         z-index: 0;
-        flex: 0 0 48%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-    }
-    .rowImges{
-        position: relative;
-        display: flex;
-        align-items: stretch;
-        gap: 32px;
-    }
-    li{
-        &[data-selector="true"] {  
-            border: 1px solid #000;
-       }
-
-    }
-}
-
-.back{
-    border-radius: 10px;
-    background: var(--information-500, #54A6FF);
-    display: flex;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-.BigImg{
-
-    img{
-        width: 350px;
-        height: 120px;
-        padding-left:32px ;
-    }
-}
-#mainImg{
-    background: url('/Library/REACT/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg') ;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    color:#fff;
-    padding: 24px;
-    &[data-selector="true"] {
-        background: url();
-        color:#000;
-
-    }
-
-    .heroText{
-        padding-bottom: 32px;
-      
-        .heroTitle{
-            line-height: 150%;
-            font-size: 2em;
-            padding-bottom:16px ;
+        max-width: 490px;
+        width: 60%;
+        @media (max-width:768px) {
+            min-width: 100%;
         }
-        .heroSubtitle{
-            line-height: 150%
+        .Hero{
+            border-radius: 10px;
+            background: #3563E9;
+            .HeroBack{
+                padding: 24px 24px 0 24px;
+                background: url('/Library/REACT/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg')0 0/ cover;
+                .HeroText{
+                    .HeroTitle{
+                        color: #FFF;
+                        font-size: 32px;
+                        font-weight: 600;
+                        line-height: 150%;
+                        letter-spacing: -0.96px;
+                        @media (max-width:500px) {
+                            font-size: 16px;
+                        }
+                    }
+                    .HeroSubtitle{
+                        padding-top: 16px;
+                        color:#FFF;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 150%; 
+                        letter-spacing: -0.32px;
+                        @media (max-width:500px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .HeroImageContainer{
+                    padding: 32px 32px 0 32px;
+                    .HeroImg{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .rowImges{
+            display: flex;
+            padding-top: 24px;
+            justify-content: start;
+            gap: 24px;
+            align-items: stretch;
+            img{
+                max-width: 100%;
+                max-height: none;
+            }
+            @media (max-width:768px) {
+                justify-content: space-around;
+            }
+            .rowImageTheCar{
+                border-radius: 10px;
+                background: #3563E9;
+                .rowImageTheCarback{
+                    max-width: 148px;
+                    max-height: 124px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: url('/Library/REACT/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg')0 0/ cover;
+                    height: 100%;
+                    .TheCar{
+                        width: 80%;
+                    }
+                }
+            }
         }
     }
-
-}
-
-
-
-
-
-.information{
-    border-radius: 10px;
-    flex: 0 0 47%;
-    background-color: #fff;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .header{
+    .information{
+        border-radius: 10px;
+        flex: 1 1 50%;
+        background-color: #fff;
+        padding: 24px;
         display: flex;
         flex-direction: column;
-        .CarName{
-            color: var(--secondary-500, #1A202C);
-            font-size: 2em;
-            font-weight: 700;
-            line-height: 150%; 
-            letter-spacing: -0.96px;
-        }
-
-        .Rating{
-            .Reviewer{
-                color: var(--secondary-400, #596780);
-                font-size: 14px;
-                font-weight: 500;
-                line-height: normal;
-                letter-spacing: 0.28px;
-            }
-        }
-    }
-    .item{
-        .discription{
-            color: var(--secondary-400, #596780);
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 200%;
-            letter-spacing: -0.4px;
-        }
-        .Characteristics{
-            color: #596780;
-            padding-top: 32px;
-            display: flex;
-            justify-content: space-between;
-
-            .lineFirst{
-                flex:  0 0 40%;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                align-items: stretch;
-                div{
-                    display: flex;
-                    justify-content: space-between;
-
-                }
-            }
-            .line{
-                flex: 0 0 40%;
-                display: flex;
-                justify-content: space-around;
-                flex-direction: column;
-                div{
-                    display: flex;
-                    justify-content: space-between;
-                }
-            }
-
-        }
-        .UpperLine{
-            margin-bottom: 16px;
-        }
-    }
-    .footer{
-        display: flex;
         justify-content: space-between;
 
-        .cost{
-            color:#1A202C;
-            font-size: 1.5em;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            em{
-                color: #90A3BF;
-                font-size: 1rem;
+        .header{
+            display: flex;
+            flex-direction: column;
+            .CarName{
+                color: var(--secondary-500, #1A202C);
+                font-size: 2em;
                 font-weight: 700;
+                line-height: 150%; 
+                letter-spacing: -0.96px;
+                @media (max-width:500px) {
+                    font-size: 20px;
+                }
             }
-            .Old{
-                color: #90A3BF;
-                font-size: 1rem;
-                font-weight: 700;
-                text-decoration: line-through;
+
+            .Rating{
+                .Reviewer{
+                    color: var(--secondary-400, #596780);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: 0.28px;
+                }
             }
         }
-        .Rent{
-            padding: 16px;
-            border-radius: 4px;
-            background:  #3563E9;
-            border: none;
+        .item{
+            .discription{
+                color: var(--secondary-400, #596780);
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 200%;
+                letter-spacing: -0.4px;
+                @media (max-width:500px) {
+                    font-size: 12px;
+                }
+            }
+            .Characteristics{
+                color: #596780;
+                padding-top: 32px;
+                display: flex;
+                justify-content: space-between;
+                @media (max-width:500px) {
+                    font-size: 12px;
+                }
+
+                .lineFirst{
+                    flex:  0 0 40%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: stretch;
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+
+                    }
+                }
+                .line{
+                    flex: 0 0 40%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
+            }
+            .UpperLine{
+                margin-bottom: 16px;
+            }
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            @media (max-width:768px) {
+                padding-top: 32px;;
+            }
+
+            .cost{
+                color:#1A202C;
+                font-size: 1.5em;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                @media (max-width:500px) {
+                    font-size: 12px;
+                }
+
+                em{
+                    color: #90A3BF;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    @media (max-width:500px) {
+                        font-size: 12px;
+                    }
+    
+                }
+                .Old{
+                    color: #90A3BF;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    text-decoration: line-through;
+                    @media (max-width:500px) {
+                        font-size: 12px;
+                    }    
+                }
+            }
+            .Rent{
+                padding: 16px;
+                border-radius: 4px;
+                background:  #3563E9;
+                border: none;
+            }
         }
     }
 }
 .Comment{
     background-color: #fff;
+    border-radius: 10px;
 }
 .Reviews{
     display: flex;
@@ -295,11 +321,12 @@
     display: flex;
     flex-direction: column;
     .popCars{
-        display: flex;
         padding-top: 30px;
         margin-bottom: 3.7%;
         gap: 32px;
         justify-content: center;
+        overflow: hidden;
+        max-width: 100%;
         .carusel{
             padding-top: 30px;
             display: flex;
@@ -320,7 +347,6 @@
         display: flex;
         gap: 32px;
         flex-wrap: wrap;
-        justify-content: center;
     }
 }
 .Link{

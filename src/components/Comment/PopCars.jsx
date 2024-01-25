@@ -11,6 +11,7 @@ const PopCars = ({setChousenCar, navVisible, car, i}) => {
     const ref = useRef()
     const rootclasses = [classes.Card]
     const [index, setIndex] = useState({i})
+
     function HideCards(i){
         if(i > 2) {
             rootclasses.push(classes.Hide)

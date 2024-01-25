@@ -11,23 +11,20 @@ import {Link} from "react-router-dom";
 const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
     const ref = useRef()
     const rootclasses = [classes.Card]
-    useEffect(() => {
-        ref
-    }, [])
     const [index, setIndex] = useState({i})
     function HideCards(i){
         if(i > 2) {
             rootclasses.push(classes.Hide)
         }
     }
-    const isInView = useInView(ref , { margin: "0px -200px 0px -200px", once : false
+    const a = '-100px'
+    const isInView = useInView(ref , { margin: `0px ${a} 0px -200px`, once : false
       })
     
     
     if(navVisible){
          HideCards(index.i)
     }
-    console.log(isInView)
     return (
         
         <motion.div 

@@ -1,23 +1,23 @@
+import { useEffect, useState } from "react";
 import React from "react";
 import classes from "./Hero.module.scss"
 import "./Hero.css"
 import {Link } from "react-router-dom";
 
 export const Hero = ({navVisible}) => {
+    const [hide, setHide] = useState([])
+    useEffect(() => {
+        navVisible ? setHide(true) : setHide(false) 
+    }, [{hide}])
 
-    const rootclasses = [classes.UpperSide]
-    if(navVisible){
-        rootclasses.push(classes.Hide)
-    }
     return  (
         <div className={classes.HeroContainer}>
-            <div className = {rootclasses.join(" ")}>
-            
+            <div data-selector = {hide} className={classes.UpperSide}>
                 <div className={classes.leftCard} >
                     <Link className={classes.back} to = "/Comments/1" >
                         <h1>The Best Platform <br /> for Car Rental</h1>
                         <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
-                        <button> Rental Car </button>
+                        <button className={classes.leftCardbtn}> Rental Car </button>
                         <div className={classes.CarImageLeft}> <img src="src/components/HeroSection/img/Hero.png" alt="" /></div>
                     </Link>
                 </div>
@@ -27,7 +27,7 @@ export const Hero = ({navVisible}) => {
                     <Link className={classes.backTwo} to = "/Comments/2" >
                         <h1>Easy way to rent a <br /> car at a low price</h1>
                         <p>Providing cheap car rental services and safe and comfortable facilities.</p>
-                        <button>Rental Car</button>
+                        <button className={classes.rightCardbtn}>Rental Car</button>
                         <div className={classes.CarImageRight}> <img src="src/components/HeroSection/img/HeroTwo.png" alt="" /></div>
                     </Link>
                 </div>
