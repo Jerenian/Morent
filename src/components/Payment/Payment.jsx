@@ -5,8 +5,6 @@ import Summary from "./Summary/Summary";
 import Conf from "./Conf/Conf";
 import Method from "./Method/Method";
 import Rental from "./Rental/Rental";
-import Footer from "../footer/Footer";
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { AllCars } from "../CarArray";
 const Payment = ({chosenCar, setChousenCar}) => {

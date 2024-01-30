@@ -6,8 +6,8 @@ const Billing = () => {
         <div className={classes.Container}>
             <div className={classes.top}>
                 <div className={classes.topText}>
-                    <h1>Billing Info</h1>
-                    <p>Please enter your billing info</p>
+                    <h1 className={classes.TopTexttitle}>Billing Info</h1>
+                    <p className={classes.TopTextSubtitle}>Please enter your billing info</p>
                 </div>
                 <div className={classes.Steps}>Step 1 of 4</div>
             </div>

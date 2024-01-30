@@ -9,12 +9,11 @@
 
         margin-bottom: 26px;
         .title{
-            color: var(--secondary-500, #1A202C);
+            color:#1A202C;
             font-size: 20px;
             font-weight: 700;
             line-height: 150%; 
             letter-spacing: -0.6px;
-
             margin-bottom: 4px;
         }
         .subtitle{
@@ -34,6 +33,11 @@
             justify-content: space-between;
             .img{
                 max-width: 70%;
+                img{
+                    @media (max-width:540px) {
+                        width: 148px;
+                    }
+                }
             }
             padding-bottom: 24px;
             border-bottom: 1px solid rgba(195, 212, 233, 0.40);
@@ -43,14 +47,16 @@
                 flex-direction: column;
                 align-items: flex-start;
                 .carName{
-                    color: var(--secondary-500, #1A202C);
+                    color: #1A202C;
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 140%; 
+                    @media (max-width:380px) {
+                        font-size: 14px;
+                    }
                 }
                 .Rating{
-                    display: flex;
-                    flex-direction: column;
+                    display: block;
                     .Reviewer {
                         color: #3D5278;
                         font-size: 12px;
@@ -63,7 +69,6 @@
         .Cost{
             display: flex;
             flex-direction: column;
-
             margin-bottom: 24px;
             .subtotal{
                 display: flex;
@@ -89,6 +94,7 @@
                 font-weight: 600;
                 line-height: 150%; 
                 letter-spacing: -0.32px;
+                
             }
         }
         .Applay{
@@ -130,7 +136,10 @@
             font-size: 20px;
             font-weight: 700;
             line-height: 150%;
-            letter-spacing: -0.6px;
+            letter-spacing: -0.32px;
+            @media (max-width:540px) {
+                font-size: 16px;
+            }
         }
         .Footsubtitle{
             color: var(--secondary-300, #90A3BF);
@@ -144,6 +153,9 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
+            @media (max-width:540px) {
+                font-size: 20px;
+            }
 
         }
     }

@@ -24,7 +24,7 @@ import {motion} from 'framer-motion'
 ////// Создать компанент рекомендованных
 //// Создать состояние при котором оба компанента выводият маквсимальное количество машин
 
-
+// сделать кастомный якорь 
 const Comment = ({navVisible}) => {
     const {id} = useParams()
     const [show, setShow] = useState(false)
@@ -34,6 +34,7 @@ const Comment = ({navVisible}) => {
             <PopCars  navVisible = {navVisible} car = {car} i = {i} />
         ))
         const Slides = useRef()
+        const ref = useRef()
         useEffect(() => {
             setWidth(Slides.current.scrollWidth - Slides.current.offsetWidth)
         }, [])
@@ -41,12 +42,11 @@ const Comment = ({navVisible}) => {
             <RecCars car = {car}/>
         ))
         let textButton
-        if(show){
-            textButton = "Hide"
+        const HandleClick = () => {
+            setShow(!show)
+            ref.current?.scrollIntoView({behavior: 'smooth'})
         }
-        else{
-            textButton = "Show All"
-        }
+        textButton = show ? "Hide" : "Show All"
 
     return (
         <div className={classes.Container}>
@@ -78,7 +78,7 @@ const Comment = ({navVisible}) => {
                     <div className={classes.header}>
                         <h2 className={classes.CarName}>{Car.name}</h2>
                         <div className={classes.Rating}>
-                                <img alt="" />
+                                {Car.Rating}
                                 <p className={classes.Reviewer} >440+ Reviewer</p>
                             </div>
                         <Favorite></Favorite>
@@ -110,9 +110,9 @@ const Comment = ({navVisible}) => {
                 </div>
             </div>
             <div className= {classes.Comment}>
-            <Reviews show={show}/>
+            <Reviews ref = {ref} show={show}/>
                 <div className={classes.showAll} >
-                    <button className= {classes.showAllbtn} onClick={() => setShow(!show)}>{textButton} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <button className= {classes.showAllbtn} onClick={HandleClick}>{textButton} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M8.00026 11.1996C7.53359 11.1996 7.06692 11.0196 6.71359 10.6663L2.36692 6.31964C2.17359 6.1263 2.17359 5.80631 2.36692 5.61297C2.56026 5.41964 2.88026 5.41964 3.07359 5.61297L7.42026 9.95964C7.74026 10.2796 8.26026 10.2796 8.58026 9.95964L12.9269 5.61297C13.1203 5.41964 13.4403 5.41964 13.6336 5.61297C13.8269 5.80631 13.8269 6.1263 13.6336 6.31964L9.28692 10.6663C8.93359 11.0196 8.46692 11.1996 8.00026 11.1996Z" fill="#90A3BF" stroke="#90A3BF" stroke-width="0.5"/>
                         </svg>
                     </button>

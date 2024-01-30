@@ -11,13 +11,13 @@ const Conf = () => {
             <div className={classes.Steps}>Step 4 of 4</div>
         </div>
         <form className={classes.item}>
-                <div>
+                <div className={classes.checkboxItem}>
                     <label htmlFor="SendMarketing">
                     <input id="SendMarketing" type="checkbox" />
                     I agree with sending an Marketing and newsletter emails. No spam, promissed!
                     </label>
                 </div>
-                <div>
+                <div className={classes.checkboxItem}>
                     <label htmlFor="privacy">
                         <input id="privacy" type="checkbox" />
                         I agree with our terms and conditions and privacy policy.

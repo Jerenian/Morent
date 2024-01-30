@@ -8,22 +8,43 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 32px;
-    h1{
-        color: var(--secondary-500, #1A202C);
+    .TopTexttitle{
         font-size: 20px;
-        font-style: normal;
         font-weight: 700;
-        line-height: 150%;
+        line-height: 150%; 
         letter-spacing: -0.6px;
     }
-    p{
-        color: var(--secondary-300, #90A3BF);
-        font-family: Plus Jakarta Sans;
+    .TopTextSubtitle{
+        padding-top: 4px;
+        font-size: 14px;
+        color:#90A3BF;;
+    }
+    .Steps{
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 150%; 
         letter-spacing: -0.28px;
+        color: #90A3BF;
+        }
+    .title{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px;
+
+    }
+    .subtitle{
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+        
+        @media (max-width: 850px) {
+            font-size: 12px;
+        }
     }
 }
 .item{
@@ -47,6 +68,10 @@
         }
         margin-bottom: 24px;
         :first-child{padding-right: 12px;}
+        @media (max-width:540px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     .PhoneTown{
         display: flex;
@@ -54,13 +79,9 @@
             width: 100%;
         }
         :first-child{padding-right: 12px;}
+        @media (max-width:540px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
-}
-.Steps{
-    color: var(--secondary-300, #90A3BF);
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%; /* 21px */
-letter-spacing: -0.28px;
 }

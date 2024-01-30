@@ -22,7 +22,7 @@ const Summary = () => {
                         <div className={classes.discription}>
                             <div className={classes.carName} >{chosenCar.name}</div>
                             <div className={classes.Rating}>
-                                <img alt="" />
+                                {chosenCar.Rating}
                                 <p className={classes.Reviewer} >440+ Reviewer</p>
                             </div>
                         </div>

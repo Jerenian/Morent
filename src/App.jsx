@@ -17,7 +17,6 @@ function App() {
         setWD(window.innerWidth);
       };
       window.addEventListener('resize', Device);
-      console.log(screenWD)
 
     }, []);
 
@@ -28,11 +27,7 @@ if(screenWD < 600){
 else{
 	head = <Header navVisible = {navVisible} setnavVisible = {setnavVisible}  />
 }
-//Починить верстку поп и рек карс
-//Добавить массивы на страницу комментов
-//Из видео по роутеру посмотреть код с комментариями и сделать похожим образом 
-//сделать коммиты после каждго выполненного пункта 
-// сделать пренес на страницу комментов при клике на картинку каждой машитны
+// SHIFT + TAB минус табуляция
   let navclass 
   navclass = navVisible ? "NavVisible" : "NavNotVisible"
   return (

@@ -1,5 +1,7 @@
 import React from "react";
 import classes from "./footer.module.scss"
+import { RatingArr } from "../CarArray";
+
 const Footer = () => {
     return(
         <div className={classes.Container}>

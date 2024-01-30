@@ -39,6 +39,13 @@ const Nav = () => {
             type === "Hatchback"
         )
     })
+    let a 
+    if(innerWidth > 712){
+        a = 'auto'
+    } 
+    else {
+        a = '90px'
+    }
 
     return(
         <div className={classes.Wrapper} >
@@ -125,7 +132,7 @@ const Nav = () => {
                 <div className={classes.Price}>
                 <h2>PRICE</h2>
                     <form action="">
-                        <input type="range" max={100} name="" id="" />
+                        <input style={{width : a}} type="range" max={100} name="" id="" />
                     </form>
                     <p className={classes.MaxPrice}> MAX: $100</p>
                 </div>

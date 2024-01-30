@@ -5,9 +5,11 @@ import { search } from "../../../assets/icons/search";
 const HeadInput = ({navVisible, setnavVisible}) => {
     return (
         <form className={classes.form} action="">
-            {search}
-            <input placeholder="Search something here" className={classes.input} type="text" />
-            <div><HeadSort navVisible = {navVisible} setnavVisible = {setnavVisible}></HeadSort></div>
+            <div className={classes.inputContainer}>
+                {search}
+                <input placeholder="Search something here" className={classes.input} type="text" />
+            </div>
+            <div className ={classes.sort}><HeadSort navVisible = {navVisible} setnavVisible = {setnavVisible}></HeadSort></div>
 
         </form>
     )

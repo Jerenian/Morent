@@ -2,6 +2,7 @@ import React from 'react'
 import classes from "../HeaderMini.module.scss"
 import HeadUser from "../HeadUser/HeadUser";
 import HeadSort from '../HeadSort/HeadSort';
+import HeadInput from '../HeadInput/HeadInput';
 import { search } from '../../../assets/icons/search';
 export const HeaderMini = ({navVisible, setnavVisible}) => {
   return (
@@ -12,10 +13,8 @@ export const HeaderMini = ({navVisible, setnavVisible}) => {
         </div>
         <div className={classes.lowside}>
             <form className={classes.form} action="post">
-                {search}
-                <input placeholder='Search something here' className={classes.input} type="text" />
+                <HeadInput navVisible = {navVisible} setnavVisible = {setnavVisible}></HeadInput>
             </form>
-            <div className={classes.sort}><HeadSort></HeadSort></div>
         </div>
 </div>
   )

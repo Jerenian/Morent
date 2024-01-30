@@ -9,7 +9,7 @@ import HeadUser from "../HeadUser/HeadUser";
 export const Header = ({navVisible, setnavVisible}) => {
     return (
         <div className = {classes.Contaiter}>
-            <div className={classes.leftSide}>
+            <div id="header" className={classes.leftSide}>
                 <button type="submit" className = {classes.logo}>Morent </button>
                 <HeadInput navVisible = {navVisible} setnavVisible = {setnavVisible}></HeadInput>
             </div>

@@ -105,7 +105,7 @@
                 font-weight: 500;
                 line-height: 150%;
                 letter-spacing: -0.28px;
-                flex-wrap: nowrap;
+                text-wrap: nowrap;
                 @media (max-width:769px) {
                     flex-direction: column;
                     padding-top: 0;

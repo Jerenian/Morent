@@ -1,27 +1,14 @@
 import React from "react";
 import classes from "./Method.module.scss"
+import { PayPal } from "../../../../public/assets/Paypal.jsx";
+import { Bitcoin } from "../../../../public/assets/Paypal.jsx";
+import { circle } from "../../../../public/assets/circle.jsx";
 const Method = () => {
-    // const [val, setVal] = useState([])
-    // const Date = (value) => {
-    //     let day = []
-    //     let month = []
-    //     let year = []
-    //     if(value === ){
-    //         day = "0" + value
-    //         len = len + 1
-    //     }
-    //     if(len = 3){
-    //         month = "0" + value
-    //     }
-    //     year = 2023
-
-    //     return setVal(`${day} / ${month} / ${year}`)
-    // }
     return(
         <div className={classes.Container}>
         <div className={classes.top}>
             <div className={classes.topText}>
-                <h1>Billing Info</h1>
+                <h1>Payment Method</h1>
                 <p>Please enter your billing info</p>
             </div>
             <div className={classes.Steps}>Step 3 of 4</div>
@@ -29,7 +16,7 @@ const Method = () => {
         <form className={classes.item}>
         <div className={classes.topImg}>
             <div className={classes.leftImg}>
-                    <img src="src/components/HeroSection/img/circle.svg" alt="" />
+                    <div className={classes.circle}>{ circle }</div>
                     <p>Credit Card</p> 
             </div>
             <div className={classes.rightImg}>
@@ -66,7 +53,7 @@ const Method = () => {
                     <input name ="pay" value='paypal' id = "Paypal" type="radio" />
                     <p>PayPal</p>
                 </div>
-                    <img src="src/components/HeroSection/img/paypal.svg" alt="" />
+                        {PayPal}
                 </label>
 
                 <label  className={classes.bitcoin} htmlFor="bitcoin">
@@ -74,7 +61,7 @@ const Method = () => {
                         <input name="pay" value = 'bitcoin' id="bitcoin" type="radio" />
                         <p>Bitcoin</p>
                     </div>
-                    <img src="src/components/HeroSection/img/bitcoin.svg" alt="" />
+                        {Bitcoin}
                 </label>
                 
         </form>

@@ -2,11 +2,26 @@
     padding: 32px;
     display: flex;
     justify-content: flex-start;
+    @media (max-width:850px) {
+        flex-direction: column;
+        gap: 32px;
+    }
 }
 .leftSide{
     flex: 1 1 62%;
+    @media (max-width:850px) {
+        order: 1;
+        display: block;
+        width: 100%;
+    }
 }
 .rightSide{
     padding-left: 32px;
     flex: 1 1 37%;
+    @media (max-width:850px) {
+        order: 0;
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
 }

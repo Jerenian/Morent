@@ -58,7 +58,7 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
                 </div>
                 <div>
                         {People}
-                    <p className={classes.Characteristics}>{car.People} People</p>
+                    <p className={classes.Characteristics}><span>{car.People} People</span></p>
                 </div>
             </div>
             <div className={classes.footer}>

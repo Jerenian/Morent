@@ -5,24 +5,31 @@ body{
     height: calc(2120 / $heightpersent * 1%);
     font-family: Plus Jakarta Sans;
     box-sizing: border-box;
-    //overflow: scroll;
 
 }
 main{
-
     padding-top : calc(40 / $heightpersent * 1%);
 }
 .NavVisible{
     display: flex;
+    gap: 32px;
     nav{
         display: flex;
         max-width: 360px;
         width: 20%;
         align-items: stretch;
+        @media (max-width:555px) {
+            max-width: none;
+            width: 100%;
+        }
     }
     main{
         width: 80%;
+        @media (max-width:555px) {
+            display: none;
+        }
     }
+
 }
 .NavNotVisible{
     display: block;
