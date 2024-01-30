@@ -28,6 +28,7 @@
         width: 60%;
         @media (max-width:768px) {
             min-width: 100%;
+            
         }
         .Hero{
             border-radius: 10px;
@@ -62,6 +63,10 @@
                     padding: 32px 32px 0 32px;
                     .HeroImg{
                         width: 100%;
+                        @media (max-width:768px) {
+                            width: 70%;
+                            min-width: 190px;
+                        }
                     }
                 }
             }
@@ -88,7 +93,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: url('/Library/REACT/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg')0 0/ cover;
+                    background: url('/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg')0 0/ cover repeat; 
                     height: 100%;
                     .TheCar{
                         width: 80%;
@@ -137,9 +142,7 @@
                 font-weight: 400;
                 line-height: 200%;
                 letter-spacing: -0.4px;
-                @media (max-width:500px) {
-                    font-size: 12px;
-                }
+
             }
             .Characteristics{
                 color: #596780;
@@ -148,6 +151,14 @@
                 justify-content: space-between;
                 @media (max-width:500px) {
                     font-size: 12px;
+                }
+                p{
+                    @media (max-width:500px) {
+                        font-size: 12px;
+                    }
+                    @media (max-width:357px) {
+                        font-size: 10px;
+                    }
                 }
 
                 .lineFirst{

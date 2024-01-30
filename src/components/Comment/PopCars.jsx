@@ -31,7 +31,8 @@ const PopCars = ({setChousenCar, navVisible, car, i}) => {
         style={{
             transition: '1s',
             opacity : isInView ? 1 : 0.3
-        }}>
+        }} 
+        >
             <Link className={classes.Link} to = {`/Comments/${car.id}`}>
         <div id={i} onClick={() => setIndex()} key={i} className={rootclasses.join(" ")}>
             <div className={classes.Header}>

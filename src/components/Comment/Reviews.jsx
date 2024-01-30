@@ -5,8 +5,6 @@ import { useRef } from 'react'
 import { RatingArr } from '../CarArray'
 
 const Reviews = ({show}) => {
-    let a = document.querySelector('#title')
-    const ref = useRef()
     let comment = ReviewsArr
     if(show){
         comment = comment.concat(comment) 
@@ -15,18 +13,18 @@ const Reviews = ({show}) => {
         }
         comment = comment.concat(ReviewsArr)
         comment.length = comment.length - 1
-        let a = '#11'
-        setTimeout(ref.current.scrollIntoView(true), 1500)
+        window.location.href = `#${comment.length - 2}`
     }
-    
-    
+    else{
+        window.location.href = `#1`
+    }
 
 
   return (
     <div id='title' className={classes.Reviews}>
         <h2 className={classes.titleReviews}>Reviews <strong className={classes.strongStyle}>13</strong></h2>
             {comment.map((com, i) => (
-                <div ref={ref} id={i} className={classes.CommentItem}>
+                <div id={i} className={classes.CommentItem}>
                     <div className={classes.ReviewsPhoto}>
                         <img src={com.src} alt="" />
                     </div>
@@ -47,7 +45,6 @@ const Reviews = ({show}) => {
                     </div>
                 </div>
             ))}
-            <em id='l'>eeee</em>
     </div>
   )
 }
