@@ -5,36 +5,13 @@ import { gas } from "../../assets/icons/gas";
 import { People } from "../../assets/icons/People";
 import { manual } from "../../assets/icons/manual";
 import {Link} from "react-router-dom";
-import {motion, useInView} from "framer-motion"
 
-const PopCars = ({setChousenCar, navVisible, car, i}) => {
-    const ref = useRef()
-    const rootclasses = [classes.Card]
-    const [index, setIndex] = useState({i})
-
-    function HideCards(i){
-        if(i > 2) {
-            rootclasses.push(classes.Hide)
-        }
-    }
-    const isInView = useInView(ref , { margin: "0px -200px 0px -200px", once : false
-})
-    
-    if(navVisible){
-         HideCards(index.i)
-    }
+const PopCars = ({car, i}) => {
     return (
         
-        <motion.div 
-        ref={ref}
-        className={classes.List}
-        style={{
-            transition: '1s',
-            opacity : isInView ? 1 : 0.3
-        }} 
-        >
-            <Link className={classes.Link} to = {`/Comments/${car.id}`}>
-        <div id={i} onClick={() => setIndex()} key={i} className={rootclasses.join(" ")}>
+        <div className={classes.List}>
+            <Link className={classes.Link} to = {`/Comments/${car.id}`} preventScrollReset={true} >
+        <div className={classes.Card} id={i}>
             <div className={classes.Header}>
                 <div className={classes.Name}>
                     <h2>{car.name}</h2>
@@ -68,7 +45,7 @@ const PopCars = ({setChousenCar, navVisible, car, i}) => {
             </div>
         </div>
         </Link>
-    </motion.div>
+    </div>
   
     )
 }

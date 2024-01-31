@@ -13,10 +13,6 @@ const Reviews = ({show}) => {
         }
         comment = comment.concat(ReviewsArr)
         comment.length = comment.length - 1
-        window.location.href = `#${comment.length - 2}`
-    }
-    else{
-        window.location.href = `#1`
     }
 
 

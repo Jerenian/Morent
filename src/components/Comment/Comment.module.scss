@@ -35,7 +35,7 @@
             background: #3563E9;
             .HeroBack{
                 padding: 24px 24px 0 24px;
-                background: url('/Library/REACT/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg')0 0/ cover;
+                background: url('/Library/REACT/ReactStart/Git/Morent/Morent/Morent/public/assets/arrows.svg')0 0/ cover;
                 .HeroText{
                     .HeroTitle{
                         color: #FFF;
@@ -93,7 +93,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: url('/ReactStart/Morent/Morent/Morent/src/assets/arrows.svg')0 0/ cover repeat; 
+                    background: url('/Library/REACT/ReactStart/Git/Morent/Morent/Morent/public/assets/arrows.svg')0 0/ cover repeat; 
                     height: 100%;
                     .TheCar{
                         width: 80%;
@@ -338,6 +338,33 @@
 .Cars{
     display: flex;
     flex-direction: column;
+    .Poptitle{
+        color: #90A3BF;
+        padding-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        button{
+            border: none;
+            background: transparent;
+            text-decoration: none;
+            color: #3563E9;
+            display: flex;
+        }
+    }
+    .Rectitle{
+        color: #90A3BF;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        button{
+            border: none;
+            background: transparent;
+            text-decoration: none;
+            color: #3563E9;
+            display: flex;
+        }
+    }
     .popCars{
         padding-top: 30px;
         margin-bottom: 3.7%;
@@ -352,22 +379,25 @@
             gap: 32px;
             justify-content: start;
             cursor: grab;
-            @media (max-width:765px) {
-                flex-wrap: nowrap;
-                justify-content: start;
-               
+            &[data-selector = "true"]{
+                flex-wrap: wrap;
             }
-          
         }
-        }
+    }
     
     .recCars{
         display: flex;
         gap: 32px;
-        flex-wrap: wrap;
+        flex-wrap:nowrap;
+        overflow:hidden;
+        &[data-selector = "true"]{
+            flex-wrap: wrap;
+            overflow: auto;
+        }
     }
 }
 .Link{
     display: flex;
     justify-content: start;
+    width: 100%;
 }

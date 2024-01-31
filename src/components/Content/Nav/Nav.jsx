@@ -2,43 +2,6 @@ import React, { useState } from "react";
 import { AllCars } from "../../CarArray";
 import classes from "./Nav.module.scss"
 const Nav = () => {
-    const [SortType, setSortTypes] = useState()
-    const Types = AllCars.map((q) => q.type)
-    const People = AllCars.map((People) => People.People)
-    const Two = People.filter((num) => num === 2)
-    const Four = People.filter((num) => num === 4)
-    const Six = People.filter((num) => num === 6)
-    const Eight = People.filter((num) => num > 7)
-    const Sport = Types.filter((type) => {
-        return (
-            type === "Sport"
-        )
-    })
-    const SUV = Types.filter((type) => {
-        return (
-            type === "SUV"
-        )
-    })
-    const MPV = Types.filter((type) => {
-        return (
-            type === "MPV"
-        )
-    })
-    const Sedan = Types.filter((type) => {
-        return (
-            type === "Sedan"
-        )
-    })
-    const Coupe = Types.filter((type) => {
-        return (
-            type === "Coupe"
-        )
-    })
-    const Hatchback = Types.filter((type) => {
-        return (
-            type === "Hatchback"
-        )
-    })
     let a 
     if(innerWidth > 712){
         a = 'auto'
@@ -57,41 +20,41 @@ const Nav = () => {
                             <label className={classes.Label}>
                             <input type="checkbox" className={classes.input} />
                         
-                            Sport <em>  ({Sport.length})</em>
+                            Sport <em>10</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label} >
                             <input type="checkbox" className={classes.input} />
-                                SUV <em> ({SUV.length})</em>
+                                SUV <em> 12</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label} >
                             <input type="checkbox" className={classes.input} />
                                 
-                                MPV <em>  ({MPV.length})</em>
+                                MPV <em>  16</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label} >
                             <input type="checkbox" className={classes.input} />
                             
-                                Sedan <em>  ({Sedan.length})</em>
+                                Sedan <em> 20</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label} >
                             <input type="checkbox" className={classes.input} />
                             
-                            Coupe <em>  ({Coupe.length})</em>
+                            Coupe <em>  14</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label} >
                             <input type="checkbox" className={classes.input} />
                             
-                            Hatchback <em>  ({Hatchback.length})</em>
+                            Hatchback <em>  14</em>
                             </label>
                         </div>
                     </form>
@@ -102,28 +65,28 @@ const Nav = () => {
                         <div className={classes.div}>
                             <label className={classes.Label}>
                             <input type="checkbox" className={classes.input} />
-                            2 Person <em>  ({Two.length})</em>
+                            2 Person <em>  10</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label}>
                             <input type="checkbox" className={classes.input} />
                                 
-                                4 Person <em>  ({Four.length})</em>
+                                4 Person <em>  14</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label}>
                             <input type="checkbox" className={classes.input} />
                                 
-                                6 Person <em>  ({Six.length})</em>
+                                6 Person <em>  12</em>
                             </label>
                         </div>
                         <div className={classes.div}>
                             <label className={classes.Label}>
                             <input type="checkbox" className={classes.input} />
                                 
-                                8 or More <em>  ({Eight.length})</em>
+                                8 or More <em>  16</em>
                             </label>
                         </div>
 

@@ -18,8 +18,7 @@ const SetPopCars = ({setChousenCar, navVisible, car, i}) => {
         }
     }
     const a = '-100px'
-    const isInView = useInView(ref , { margin: `0px ${a} 0px -200px`, once : false
-      })
+    const isInView = useInView(ref , { margin: "0px -250px 0px -200px", once : false})
     
     
     if(navVisible){
