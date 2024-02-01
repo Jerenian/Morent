@@ -15,10 +15,10 @@ export const Header = ({navVisible, setnavVisible}) => {
             </div>
             <div className={classes.rightSide}>
                 <ul className={classes.list}>
-                    <HeadNotice></HeadNotice>
-                    <HeadHurt />
-                    <HeadSettings />
-                    <HeadUser />
+                    <li><HeadNotice></HeadNotice></li>
+                    <li><HeadHurt /></li>
+                    <li><HeadSettings /></li>
+                    <li className={classes.user} ><HeadUser  /></li>
                     
                 </ul>
             </div>

@@ -30,10 +30,19 @@
         flex-direction: column;
         .car{
             display: flex;
-            justify-content: space-between;
+            justify-content:start;
+            gap: 24px;
+
             .img{
-                max-width: 70%;
+                border-radius: 8px;
+                background-color: #3563E9;
+                .background{
+                    background: url('/Library/REACT/ReactStart/Git/Morent/Morent/Morent/public/assets/arrowsmall.svg');
+                    padding: 36px 8px;;
+                }
+               
                 img{
+                    max-width:116px;
                     @media (max-width:540px) {
                         width: 148px;
                     }

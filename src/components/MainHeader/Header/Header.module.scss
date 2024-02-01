@@ -38,11 +38,29 @@ $heightpersent: calc(2120 / 100);
     display: flex;
     justify-content: flex-end;
     .list{
-        width: calc(236 / $SidesPersent * 1%);
         display: flex;
+        align-items:center;
         justify-content: space-around;
+        gap: 20px;
+
+
+        svg{
+            padding: 10px;
+            border-radius: 90px;
+            border: 1px solid rgba(195, 212, 233, 0.40);
+            opacity: 0.8;
+            @media (max-width:1120px) {
+                display: none;
+            }
+        }
+        .user{
+            svg{
+            @media (max-width:1120px) {
+                display: block;
+            }
+            }
+        }
     }
-    
 }
 img{
     cursor: pointer;

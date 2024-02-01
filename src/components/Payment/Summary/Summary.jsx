@@ -17,7 +17,9 @@ const Summary = () => {
                 <div className={classes.item}>
                     <div className={classes.car}>
                         <div className={classes.img}>
-                            <img src={`${location.origin}/${chosenCar.src}`} alt="" />
+                            <div className={classes.background}>
+                                <img src={`${location.origin}/${chosenCar.src}`} alt="" />
+                            </div>
                         </div>
                         <div className={classes.discription}>
                             <div className={classes.carName} >{chosenCar.name}</div>
