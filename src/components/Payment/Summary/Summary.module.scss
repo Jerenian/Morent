@@ -1,0 +1,171 @@
+.Container{
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    .Head{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        margin-bottom: 26px;
+        .title{
+            color:#1A202C;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 150%; 
+            letter-spacing: -0.6px;
+            margin-bottom: 4px;
+        }
+        .subtitle{
+            color: var(--secondary-300, #90A3BF);
+            font-weight: 500;
+            line-height: 150%; 
+            letter-spacing: -0.28px;
+        }
+    }
+
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        .car{
+            display: flex;
+            justify-content:start;
+            gap: 24px;
+
+            .img{
+                border-radius: 8px;
+                background-color: #3563E9;
+                .background{
+                    background: url('/Library/REACT/ReactStart/Git/Morent/Morent/Morent/public/assets/arrowsmall.svg');
+                    padding: 36px 8px;;
+                }
+               
+                img{
+                    max-width:116px;
+                    @media (max-width:540px) {
+                        width: 148px;
+                    }
+                }
+            }
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(195, 212, 233, 0.40);
+            margin-bottom: 16px;
+            .discription{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                .carName{
+                    color: #1A202C;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 140%; 
+                    @media (max-width:380px) {
+                        font-size: 14px;
+                    }
+                }
+                .Rating{
+                    display: block;
+                    .Reviewer {
+                        color: #3D5278;
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: 0.24px;
+                    }
+                }
+            }
+        }
+        .Cost{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+            .subtotal{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 12px;
+            }
+            .tax{
+                display: flex;
+                justify-content: space-between;
+            }
+            .Costtext{
+                color: var(--secondary-300, #90A3BF);
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: -0.24px;
+            }
+            .Costsum{
+                color: var(--secondary-500, #1A202C);
+                text-align: right;
+                font-family: Plus Jakarta Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%; 
+                letter-spacing: -0.32px;
+                
+            }
+        }
+        .Applay{
+            border-radius: 10px;
+            background: #F6F7F9;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            margin-bottom: 24px;
+            .Promo{ 
+                outline:none;
+                border: none;
+                background: transparent;
+                //color: var(--secondary-300, #90A3BF);
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: -0.24px;
+            }
+            .ApNow{
+                outline:none;
+                border: none;
+                background: transparent;
+                color: var(--secondary-500, #1A202C);
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -0.24px;
+                cursor: pointer;
+            }
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        
+        .Foottitle{
+            color: var(--secondary-500, #1A202C);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+            @media (max-width:540px) {
+                font-size: 16px;
+            }
+        }
+        .Footsubtitle{
+            color: var(--secondary-300, #90A3BF);
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: -0.28px;
+        }
+        .FootSum{
+            color: var(--secondary-500, #1A202C);
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            @media (max-width:540px) {
+                font-size: 20px;
+            }
+
+        }
+    }
+}

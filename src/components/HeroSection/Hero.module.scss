@@ -1,0 +1,250 @@
+$persent: calc(1440 / 100);
+$ThisHeight: calc(743 / 100); // до плашки popular cars
+$heightpersent: calc(2120 / 100);
+
+.UpperSide{
+    display: flex;
+    align-items: stretch;
+    gap: 48px;
+    &[data-selector="true"] {
+        display: none;
+    }
+        h1{
+            font-size: 1.7em;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: 0.96px;
+            margin-bottom:4.44% ;
+    
+        }
+        p{
+            font-size: 1em;
+            width: 44.28%;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+            margin-bottom:5.55% ;
+    
+        }
+        button {
+            color: #fff;
+            display: flex;
+            width: 120px;
+            height: 44px;
+            padding: 0px 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            background:#54A6FF;
+            border: 0;
+        }
+}
+.UpperSide.Hide {
+    display: none;
+
+}
+.leftCard{
+    flex: 1 1 50%;
+    border-radius: 10px;
+    background:#54A6FF;
+    display: block;
+    overflow: hidden;
+}
+.back{
+    padding: 34px;
+    background: url("src/components/HeroSection/img/Spiral.svg") -125px 0/cover no-repeat ;
+    width: 100%;
+    height: 100%;
+    color:#fff;
+    display: block;
+    @media (max-width: 1024px) {
+        padding:6px 16px 0px 16px  ;
+        h1{
+            width: 80%;
+            font-size: 4vw;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: 0.96px;
+            margin-bottom:4.44%;
+        }
+        p{
+            width: 80%;
+            font-size: 2.5vw;
+            line-height: 150%;
+            letter-spacing: -0.32px;
+            margin-bottom:5.55% ;
+    
+        }
+
+    }
+    .leftCardbtn {
+        color: #fff;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background:#3563E9;
+        border: 0;
+        margin-bottom: 24px;
+    }
+}
+.RightCard{    
+    flex: 1 1 50%;
+    border-radius: 10px;
+    background:#3563E9;
+    display: block;
+    overflow: hidden;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    .rightCardbtn {
+        color: #fff;
+        display: flex;
+        width: 120px;
+        height: 44px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background:#54A6FF;
+        border: 0;
+        margin-bottom: 24px;
+    }
+}
+    
+
+
+.backTwo{
+    display: block;
+    background: url("src/components/HeroSection/img/arrows.svg")-75px 0/cover no-repeat ;
+    min-height: 100%;
+    color:#fff;
+    padding: 28px 24px 0px 24px;
+
+}
+/// Нижняя часть
+.LowerSide{
+    border-radius: 10px;
+    display: flex;
+    padding:32px 27px;
+    @media (max-width:1024px) {
+        flex-direction: column;
+        padding:32px 0;
+    }
+    
+}
+.top{
+    display: flex;
+    justify-content: flex-start;
+    p{
+        padding-left: 8px;
+        display: flex;
+        align-items: center;
+    }
+}
+.CarImageLeft{
+    padding-left:18%;
+    width: 100%;
+    img{
+        width: 60%;
+    }
+}
+.CarImageRight{
+    padding-left: 28%;
+    width: 100%;
+    img{
+        width: 60%;
+    }
+}
+
+/// первая часть
+.PickUp{
+    flex: 1 1 44%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding:16px 3.67% ;
+    @media (max-width: 1024px) {
+        margin-bottom: 16px;
+    }
+    img{
+        width: 16px;
+        border-radius: 70px;
+        border: 4px solid #C2D0F9;
+    }
+}
+
+/// 2 часть
+
+.Arrows{
+    flex:1 1 11.2%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+        padding: 18px;
+        background-color: #3563E9;
+        border-radius: 10px;
+        @media (max-width: 1024px) {
+            position: absolute;
+        }
+    }
+} 
+
+/// 3 часть
+
+.DropOff{
+    flex: 1 1 44%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding:16px 3.67% ;
+    @media (max-width: 1024px) {
+        margin-top: 16px;
+    }
+    img{
+        width: 16px;
+        border-radius: 70px;
+        border: 4px solid #C2D0F9;
+    }
+}
+.Content{
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-around;
+    div{
+        flex: 0 0 33%;
+        display: flex;
+        justify-content: start;
+        padding-left: 4.1%;
+        flex-direction: column;
+        p{
+            padding: 5%;
+            padding-left: 4%;
+            font-size: 0.8em;
+            color: #90A3BF;
+        }
+        select {
+            padding-left: 4%;
+            border: none;
+        }
+    }
+}
+.date{
+    border-left: 1px solid #90A3BF;
+    border-right: 1px solid #90A3BF;
+}
+.title{
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.32px;
+}

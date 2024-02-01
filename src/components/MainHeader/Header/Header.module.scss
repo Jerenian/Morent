@@ -1,0 +1,67 @@
+$persent: calc(1440 / 100 - 2 * (60 / 1440 / 100));
+$SidesPersent: calc($persent / 2);
+$heightpersent: calc(2120 / 100);
+
+.Contaiter{
+    background-color: #fff;
+    height: calc(124 / $heightpersent * 1%);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: calc(40 / $heightpersent * 1%);
+    padding-left: calc(60 / $persent * 1%);
+    padding-right: calc(60 / $persent * 1%);
+    padding-top : calc(40 / $heightpersent * 1%);
+    border-bottom: 1px solid rgba(195, 212, 233, 0.40);
+}
+//~~~~~~~~~~~LEFTSIDE~~~~~~~~~~//
+
+
+.leftSide{
+    flex: 50%;
+    display: flex;
+    justify-content: space-around;
+    .logo{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #3563E9;
+        font-size: 2vw;
+        border: none; outline: none;
+        background: transparent;
+    }
+}
+
+
+//~~~~~~~~~~~RIGHTSIDE~~~~~~~~~~//
+.rightSide{
+    flex: 50%;
+    display: flex;
+    justify-content: flex-end;
+    .list{
+        display: flex;
+        align-items:center;
+        justify-content: space-around;
+        gap: 20px;
+
+
+        svg{
+            padding: 10px;
+            border-radius: 90px;
+            border: 1px solid rgba(195, 212, 233, 0.40);
+            opacity: 0.8;
+            @media (max-width:1120px) {
+                display: none;
+            }
+        }
+        .user{
+            svg{
+            @media (max-width:1120px) {
+                display: block;
+            }
+            }
+        }
+    }
+}
+img{
+    cursor: pointer;
+}
