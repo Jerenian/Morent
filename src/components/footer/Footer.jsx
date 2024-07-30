@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className={classes.RightUp}>
                     <h3 className={classes.About}>About
                         <ul className={classes.list}>  
-                            <li>How it works</li>
+                            <li>How it Works</li>
                             <li>Featured</li>
                             <li>Partnership</li>
                             <li>Bussiness Relation</li>
@@ -33,6 +33,7 @@ const Footer = () => {
                             <li>Instagram</li>
                             <li>Twitter</li>
                             <li>Facebook</li>
+                            <li>Github</li>
                         </ul>
                     </h3>
                 </div>
