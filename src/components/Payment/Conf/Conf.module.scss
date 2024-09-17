@@ -1,0 +1,93 @@
+.Container{
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom:32px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    h1{
+        color: var(--secondary-500, #1A202C);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px;
+    }
+    p{
+        color: var(--secondary-300, #90A3BF);
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+    }
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    gap:32px;
+    .checkboxItem{
+        padding: 24px 32px;
+        border-radius: 10px;
+        background: #F6F7F9;
+    }
+    div{
+        display: flex;
+        
+    }
+    label{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        width: 100%;
+
+        input{
+            margin-right: 20px;
+    }
+}
+}
+.Steps{
+    color: var(--secondary-300, #90A3BF);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 21px */
+letter-spacing: -0.28px;
+}
+.btn{
+    margin-bottom: 32px;
+    button{
+        border-radius: 4px;
+        background: var(--primary-500, #3563E9);
+        border: 0;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding:16px 20px;
+    }
+}
+.footer{
+    img{
+        margin-bottom: 16px;
+    }
+    h2{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: -0.32px;
+    }
+    p{
+        color: var(--secondary-300, #90A3BF);
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+    }
+}

@@ -1,0 +1,87 @@
+.Container{
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom:32px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    .TopTexttitle{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 150%; 
+        letter-spacing: -0.6px;
+    }
+    .TopTextSubtitle{
+        padding-top: 4px;
+        font-size: 14px;
+        color:#90A3BF;;
+    }
+    .Steps{
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+        color: #90A3BF;
+        }
+    .title{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: -0.6px;
+
+    }
+    .subtitle{
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; 
+        letter-spacing: -0.28px;
+        
+        @media (max-width: 850px) {
+            font-size: 12px;
+        }
+    }
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    input{
+        padding: 5%;
+        font-size: 14px;
+        width: 86%;
+        border-radius: 10px;
+        background: #F6F7F9;
+        border: 0;
+    }
+    h2{
+        padding-bottom: 5%;
+    }
+    .NameAddres{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        margin-bottom: 24px;
+        :first-child{padding-right: 12px;}
+        @media (max-width:540px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .PhoneTown{
+        display: flex;
+        div{
+            width: 100%;
+        }
+        :first-child{padding-right: 12px;}
+        @media (max-width:540px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}
